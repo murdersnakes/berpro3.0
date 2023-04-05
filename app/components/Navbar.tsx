@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaHome, FaUser, FaBriefcase, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaBriefcase, FaEnvelope, FaBook } from "react-icons/fa";
 
 const navlinks = [
   {
@@ -17,6 +17,11 @@ const navlinks = [
     name: "Services",
     link: "/services",
     icon: <FaBriefcase />,
+  },
+  {
+    name: "Bookings",
+    link: "/bookings",
+    icon: <FaBook />,
   },
   {
     name: "Contact",

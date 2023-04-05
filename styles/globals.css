@@ -19,7 +19,7 @@
     @apply max-w-7xl px-5 mx-auto
   }
   .h1{
-    @apply font-sans font-extrabold text-3xl tracking-normal lg:text-4xl
+    @apply font-sans font-extrabold text-3xl tracking-widest lg:text-4xl
   }
   .p1{
     @apply font-sans font-medium text-base tracking-normal lg:text-xl
