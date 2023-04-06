@@ -37,31 +37,31 @@
     @apply max-w-7xl px-5 mx-auto
   }
   .h1{
-    @apply font-sans font-extrabold text-3xl tracking-widest lg:text-4xl
+    @apply text-3xl font-bold leading-none sm:text-4xl
   }
   .p1{
-    @apply font-sans font-medium text-base tracking-normal lg:text-xl
+    @apply text-base md:text-lg
   }
   .h2{
-    @apply font-sans font-bold text-2xl tracking-normal lg:text-3xl
+    @apply text-2xl font-bold leading-none sm:text-3xl
   }
   .p2{
-    @apply font-sans font-normal text-base tracking-normal lg:text-lg
+    @apply text-sm md:text-base
   }
   .h3{
-    @apply font-sans font-medium text-xl tracking-normal
+    @apply text-xl font-bold leading-none sm:text-2xl
   }
   .p3{
-    @apply font-sans font-normal text-sm tracking-normal leading-relaxed
+    @apply text-xs md:text-sm
   }
   .h4{
-    @apply font-sans font-medium text-lg tracking-normal
+    @apply text-lg font-bold leading-none sm:text-xl
   }
   .p4{
-    @apply font-sans font-light text-xs tracking-normal leading-relaxed
+    @apply text-xs
   }
   .btn{
-    @apply font-sans font-normal text-sm tracking-wider text-[var(--body-color)] bg-[var(--primary-color)] rounded-md px-3 py-2 border border-[var(--primary-color)]
+    @apply font-normal text-sm tracking-wider text-[var(--body-color)] bg-[var(--primary-color)] rounded-md px-3 py-2 border border-[var(--primary-color)]
   }
   .btn:hover{
     @apply bg-[var(--primary-color-hover)] transition-all

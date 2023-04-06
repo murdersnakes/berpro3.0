@@ -11,7 +11,7 @@ export default function Benefits() {
               Why Choose Us?
             </p>
           </div>
-          <h2 className='max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto'>
+          <h2 className='max-w-lg mb-6 h2 md:mx-auto'>
             Benefits of Choosing BERpro for Your Energy Assessments
           </h2>
           <p className='text-base text-gray-700 md:text-lg'>
@@ -27,10 +27,10 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h6 className='mb-3 text-xl font-bold leading-5'>
+              <h6 className='mb-3 h3 font-bold leading-5'>
                 Fast and Easy
               </h6>
-              <p className='mb-3 text-sm'>
+              <p className='mb-3 p2'>
                 At BERpro, we understand that your time is valuable. That&apos;s
                 why we strive to make our energy assessments as fast and easy as
                 possible. Our certified energy assessors use the latest
@@ -48,10 +48,10 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h6 className='mb-3 text-xl font-bold leading-5'>
+              <h6 className='mb-3 h2 font-bold leading-5'>
                 Accurate and Reliable
               </h6>
-              <p className='mb-3 text-sm'>
+              <p className='mb-3 p2'>
                 We take pride in providing accurate and reliable energy
                 assessments for our clients. Our team of certified energy
                 assessors are highly trained and use state-of-the-art equipment
@@ -69,8 +69,8 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h6 className='mb-3 text-xl font-bold leading-5'>Low-Cost</h6>
-              <p className='mb-3 text-sm'>
+              <h6 className='mb-3 h2 font-bold leading-5'>Low-Cost</h6>
+              <p className='mb-3 p2'>
                 At BERpro, we believe that everyone should have access to
                 affordable energy assessments. That&apos;s why we offer low-cost
                 assessments without sacrificing quality or accuracy. We believe
@@ -86,10 +86,10 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h6 className='mb-3 text-xl font-bold leading-5'>
+              <h6 className='mb-3 h2 font-bold leading-5'>
                 Comprehensive Reports
               </h6>
-              <p className='mb-3 text-sm'>
+              <p className='mb-3 p2'>
                 We provide comprehensive reports that give you a detailed
                 analysis of your property&apos;s energy performance. Our reports
                 are easy to understand and include recommendations for improving

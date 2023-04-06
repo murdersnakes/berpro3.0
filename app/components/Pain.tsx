@@ -16,11 +16,11 @@ export default function Pain() {
               className='w-full px-[17%] lg:px-[22%]'
             />
             <div className='text-center lg:text-left '>
-              <h2 className='text-3xl'>
+              <h2 className='h2'>
                 Are you struggling with high energy costs and want to save money
                 on your bills?
               </h2>
-              <p className='text-sm mt-3 text-gray-300'>
+              <p className='p2 mt-3 text-gray-300'>
                 Using CSO data from the 2022 Survey of Income and Living
                 Conditions, it shows that an estimated 377,000 people were
                 unable to afford adequate heat. This compared to 160,000 people
@@ -34,11 +34,11 @@ export default function Pain() {
           <div className='bg-svg-1 absolute top-0 right-0 w-full h-full -z-10 '></div>
           <div className='cont grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
             <div className='text-center lg:text-left row-start-2 lg:row-start-1'>
-              <h2 className='text-3xl'>
+              <h2 className='h2'>
                 Increasing energy bills becoming more and more difficult to keep
                 up with?
               </h2>
-              <p className='text-sm mt-3 text-gray-300'>
+              <p className='p2 mt-3 text-gray-300'>
                 As a result of the energy crisis, almost 73% of Irish people say
                 they have changed their everyday habits at home to try save on
                 energy costs.
@@ -60,7 +60,7 @@ export default function Pain() {
               className='w-full px-[17%] lg:px-[22%]'
             />
             <div className='text-center lg:text-left '>
-              <h2 className='text-3xl'>
+              <h2 className='h2'>
                 That&apos;s where{" "}
                 <span className='uppercase font-bold text-[var(--text-color-hover)]'>
                   BER<span className='lowercase italic light'>pro</span>
@@ -68,7 +68,7 @@ export default function Pain() {
                 comes in! We offer professional assessments to help you identify
                 savings on energy costs.
               </h2>
-              <p className='text-sm text-gray-300 mt-3'>
+              <p className='p2 text-gray-300 mt-3'>
                 BERpro is a leading provider of professional energy assessments
                 that can help you identify ways to save on your energy costs.
                 Our experts will assess your property and provide tailored

@@ -26,19 +26,19 @@ export default function Hero() {
         <div className='relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
           <div className='flex flex-col items-center justify-between xl:flex-row'>
             <div className='w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12'>
-              <h2 className='max-w-lg mb-6 font-sans text-3xl font-medium tracking-tight text-white sm:text-4xl sm:leading-none'>
+              <h2 className='max-w-lg mb-6 h1 text-[var(--text-color)]'>
                 Get Your BER Cert Now
                 <br />
                 and Save on Energy Costs
               </h2>
-              <p className='max-w-xl mb-4 text-base text-gray-200 md:text-lg'>
+              <p className='max-w-xl mb-4 p1 text-gray-200'>
                 Save on energy costs and help the environment. Book a Building
                 Energy Rating (BER) assessment with us today.
               </p>
               <Link
                 href='/'
                 aria-label=''
-                className='inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700'
+                className='inline-flex items-center p2 tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700'
               >
                 Learn more
                 <FaChevronRight className='inline-block w-3 h-3 ml-2' />
@@ -46,54 +46,45 @@ export default function Hero() {
             </div>
             <div className='w-full max-w-xl xl:px-8 xl:w-5/12 text-[var(--body-color)]'>
               <div className='bg-[var(--text-color)] rounded shadow-2xl p-7 sm:p-10'>
-                <h3 className='mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl'>
+                <h3 className='mb-4  sm:text-center sm:mb-6 h3'>
                   Book an appointment
                 </h3>
                 <form>
                   <div className='mb-1 sm:mb-2'>
-                    <label
-                      htmlFor='firstName'
-                      className='inline-block mb-1 font-medium'
-                    >
+                    <label htmlFor='firstName' className='inline-block mb-1 p2'>
                       First name
                     </label>
                     <input
                       placeholder='John'
                       required
                       type='text'
-                      className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline'
+                      className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-[var(--primary-color)] focus:outline-none focus:shadow-outline'
                       id='firstName'
                       name='firstName'
                     />
                   </div>
                   <div className='mb-1 sm:mb-2'>
-                    <label
-                      htmlFor='lastName'
-                      className='inline-block mb-1 font-medium'
-                    >
+                    <label htmlFor='lastName' className='inline-block mb-1 p2'>
                       Last name
                     </label>
                     <input
                       placeholder='Doe'
                       required
                       type='text'
-                      className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline'
+                      className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-[var(--primary-color)] focus:outline-none focus:shadow-outline'
                       id='lastName'
                       name='lastName'
                     />
                   </div>
                   <div className='mb-1 sm:mb-2'>
-                    <label
-                      htmlFor='email'
-                      className='inline-block mb-1 font-medium'
-                    >
+                    <label htmlFor='email' className='inline-block mb-1 p2'>
                       E-mail
                     </label>
                     <input
                       placeholder='john.doe@example.org'
                       required
                       type='text'
-                      className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline'
+                      className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-[var(--primary-color)] focus:outline-none focus:shadow-outline'
                       id='email'
                       name='email'
                     />
@@ -101,12 +92,12 @@ export default function Hero() {
                   <div className='mt-4 mb-2 sm:mb-4'>
                     <button
                       type='submit'
-                      className='inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-[var(--text-color)] transition duration-200 rounded shadow-md bg-[var(--primary-color)] hover:bg-[var(--primary-color-hover)] focus:shadow-outline focus:outline-none'
+                      className='inline-flex items-center justify-center w-full h-12 px-6 p1 tracking-wide text-[var(--text-color)] transition duration-200 rounded shadow-md bg-[var(--primary-color)] hover:bg-[var(--primary-color-hover)] focus:shadow-outline focus:outline-none'
                     >
                       Submit
                     </button>
                   </div>
-                  <p className='text-xs text-gray-600 sm:text-sm'>
+                  <p className='p4'>
                     We respect your privacy and will never share your
                     information
                   </p>
