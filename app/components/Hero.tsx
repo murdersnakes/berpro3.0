@@ -15,7 +15,7 @@ export default function Hero() {
       <div className='absolute top-0 left-0 w-full h-full bg-[var(--body-color)] opacity-75'></div>
       <div className='relative  [var(--body-color)]'>
         <svg
-          className='absolute inset-x-0 bottom-0 text-[var(--body-color)]'
+          className='absolute inset-x-0 -bottom-1 text-[var(--body-color)]'
           viewBox='0 0 1160 163'
         >
           <path
@@ -101,7 +101,7 @@ export default function Hero() {
                   <div className='mt-4 mb-2 sm:mb-4'>
                     <button
                       type='submit'
-                      className='inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-[var(--body-color-hover)] transition duration-200 rounded shadow-md bg-[var(--primary-color)] hover:text-white hover:bg-[var(--body-color-hover)] focus:shadow-outline focus:outline-none'
+                      className='inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-[var(--text-color)] transition duration-200 rounded shadow-md bg-[var(--primary-color)] hover:bg-[var(--primary-color-hover)] focus:shadow-outline focus:outline-none'
                     >
                       Submit
                     </button>
