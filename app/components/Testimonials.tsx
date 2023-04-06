@@ -35,7 +35,7 @@ export default function Testimonials(props: PropType) {
                   <FaStar className='text-yellow-400' />
                   <FaStar className='text-yellow-400' />
                 </div>
-                <p className='p3 mt-2'>{person.text}</p>
+                <p className='p2 mt-2'>{person.text}</p>
               </div>
             </div>
           ))}

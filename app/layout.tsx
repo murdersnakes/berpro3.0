@@ -2,18 +2,24 @@ import React from "react";
 import "../styles/globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import {Open_Sans} from 'next/font/google'
+import { Archivo, Open_Sans } from "next/font/google";
 
-const myFont = Open_Sans({
-    subsets: ['latin'],
-    variable: "--font-sans",
-    display: "optional",
-})
+const headFont = Archivo({
+  subsets: ["latin"],
+  variable: "--font-head",
+  display: "swap",
+});
+
+const bodyFont = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' className={myFont.variable}>
-      <body className="body">
+    <html lang='en' className={`${headFont.variable} ${bodyFont.variable}`}>
+      <body className='body'>
         <Navbar />
         <main>{children}</main>
         <Footer />

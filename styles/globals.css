@@ -38,28 +38,28 @@
     @apply max-w-7xl px-5 mx-auto
   }
   .h1{
-    @apply text-3xl font-bold leading-none sm:text-4xl
+    @apply font-head text-4xl font-bold leading-none sm:text-5xl
   }
   .p1{
-    @apply text-base md:text-lg
+    @apply font-body text-base md:text-lg
   }
   .h2{
-    @apply text-2xl font-bold leading-none sm:text-3xl
+    @apply font-head text-2xl font-bold leading-none sm:text-3xl
   }
   .p2{
-    @apply text-sm md:text-base
+    @apply font-body text-sm md:text-base
   }
   .h3{
-    @apply text-xl font-bold leading-none sm:text-2xl
+    @apply font-head text-xl font-bold leading-none sm:text-2xl
   }
   .p3{
-    @apply text-xs md:text-sm
+    @apply font-body text-xs md:text-sm
   }
   .h4{
-    @apply text-lg font-bold leading-none sm:text-xl
+    @apply font-head text-lg font-bold leading-none sm:text-xl
   }
   .p4{
-    @apply text-xs
+    @apply font-body text-xs
   }
   .btn{
     @apply font-normal text-sm tracking-wider text-[var(--body-color)] bg-[var(--primary-color)] rounded-md px-3 py-2 border border-[var(--primary-color)]

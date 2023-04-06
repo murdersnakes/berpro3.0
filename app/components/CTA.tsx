@@ -12,7 +12,7 @@ export default function CTA() {
           </h1>
           <Link
             href='/bookings'
-            className='flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0'
+            className='flex-shrink-0 text-white bg-indigo-600 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-700 rounded text-lg mt-10 sm:mt-0'
           >
             Book now
           </Link>

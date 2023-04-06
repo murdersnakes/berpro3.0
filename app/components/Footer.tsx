@@ -16,9 +16,6 @@ export default function Footer() {
               SEAI certified BER assessors. We provide a fast, efficient and
               professional service.
             </p>
-            <p className='mt-4 text-sm '>
-              Dedicated to providing a high quality service to our customers.
-            </p>
           </div>
         </div>
         <div className='space-y-2 text-sm'>
@@ -27,25 +24,25 @@ export default function Footer() {
           </p>
           <div className='flex'>
             <p className='mr-1 '>Phone:</p>
-            <a
-              href='tel:850-123-5021'
+            <Link
+              href='tel:0896083228'
               aria-label='Our phone'
               title='Our phone'
-              className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
+              className='transition-colors duration-300 hover:text-white'
             >
-              850-123-5021
-            </a>
+              089 608 3228
+            </Link>
           </div>
           <div className='flex'>
             <p className='mr-1 '>Email:</p>
-            <a
-              href='mailto:info@lorem.mail'
+            <Link
+              href='mailto:info@berpro.ie'
               aria-label='Our email'
               title='Our email'
-              className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
+              className='transition-colors duration-300 hover:text-white'
             >
-              info@lorem.mail
-            </a>
+              info@berpro.ie
+            </Link>
           </div>
           <div className='flex'>
             <p className='mr-1 '>Address:</p>
@@ -55,51 +52,50 @@ export default function Footer() {
               rel='noopener noreferrer'
               aria-label='Our address'
               title='Our address'
-              className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
+              className='transition-colors duration-300 hover:text-white'
             >
-              312 Lovely Street, NY
+              5 Cois na Mara, Bettystown
             </Link>
           </div>
         </div>
         <div>
           <span className='text-base font-bold tracking-wide '>
-            Social
+            Socials
           </span>
           <div className='flex items-center mt-1 space-x-3'>
             <Link
               href='/'
-              className=' transition-colors duration-300 hover:text-deep-purple-accent-400'
+              className=' transition-colors duration-300 hover:text-white'
             >
               <FaTwitter /> 
             </Link>
             <Link
               href='/'
-              className=' transition-colors duration-300 hover:text-deep-purple-accent-400'
+              className=' transition-colors duration-300 hover:text-white'
             >
               <FaLinkedinIn />
             </Link>
             <Link
               href='/'
-              className=' transition-colors duration-300 hover:text-deep-purple-accent-400'
+              className=' transition-colors duration-300 hover:text-white'
             >
               <FaFacebookF />
             </Link>
           </div>
           <p className='mt-4 text-sm '>
-            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-            spare ribs salami.
+            Follow us for the latest industry updates and technologies.
           </p>
         </div>
       </div>
       <div className='flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row'>
         <p className='text-sm'>
-          © Copyright 2020 Lorem Inc. All rights reserved.
+          © Copyright {new Date().getFullYear()} Lorem Inc. All rights reserved.
         </p>
         <ul className='flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row'>
           <li>
             <Link
               href='/'
-              className='text-sm transition-colors duration-300 hover:text-deep-purple-accent-400'
+              className='text-sm transition-colors duration-300 hover:text-white'
             >
               F.A.Q
             </Link>
@@ -107,7 +103,7 @@ export default function Footer() {
           <li>
             <Link
               href='/'
-              className='text-sm transition-colors duration-300 hover:text-deep-purple-accent-400'
+              className='text-sm transition-colors duration-300 hover:text-white'
             >
               Privacy Policy
             </Link>
@@ -115,7 +111,7 @@ export default function Footer() {
           <li>
             <Link
               href='/'
-              className='text-sm transition-colors duration-300 hover:text-deep-purple-accent-400'
+              className='text-sm transition-colors duration-300 hover:text-white'
             >
               Terms &amp; Conditions
             </Link>
