@@ -30,7 +30,7 @@ export default function Benefits() {
               <h6 className='mb-3 h3 font-bold leading-5'>
                 Fast and Easy
               </h6>
-              <p className='mb-3 p2'>
+              <p className='mb-3 p3'>
                 At BERpro, we understand that your time is valuable. That&apos;s
                 why we strive to make our energy assessments as fast and easy as
                 possible. Our certified energy assessors use the latest
@@ -48,10 +48,10 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h6 className='mb-3 h2 font-bold leading-5'>
+              <h6 className='mb-3 h3 font-bold leading-5'>
                 Accurate and Reliable
               </h6>
-              <p className='mb-3 p2'>
+              <p className='mb-3 p3'>
                 We take pride in providing accurate and reliable energy
                 assessments for our clients. Our team of certified energy
                 assessors are highly trained and use state-of-the-art equipment
@@ -69,8 +69,8 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h6 className='mb-3 h2 font-bold leading-5'>Low-Cost</h6>
-              <p className='mb-3 p2'>
+              <h6 className='mb-3 h3 font-bold leading-5'>Low-Cost</h6>
+              <p className='mb-3 p3'>
                 At BERpro, we believe that everyone should have access to
                 affordable energy assessments. That&apos;s why we offer low-cost
                 assessments without sacrificing quality or accuracy. We believe
@@ -86,10 +86,10 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h6 className='mb-3 h2 font-bold leading-5'>
+              <h6 className='mb-3 h3 font-bold leading-5'>
                 Comprehensive Reports
               </h6>
-              <p className='mb-3 p2'>
+              <p className='mb-3 p3'>
                 We provide comprehensive reports that give you a detailed
                 analysis of your property&apos;s energy performance. Our reports
                 are easy to understand and include recommendations for improving

@@ -8,7 +8,7 @@ export default function Pain() {
   return (
     <div>
       <div className=''>
-        <div className='pt-24 pb-12 bg-[var(--body-color)]'>
+        <div className='pt-24 pb-12 bg-neutral-300 text-[var(--body-color)]'>
           <div className=' cont  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center '>
             <Image
               src={image1}
@@ -20,7 +20,7 @@ export default function Pain() {
                 Are you struggling with high energy costs and want to save money
                 on your bills?
               </h2>
-              <p className='p2 mt-3 text-gray-300'>
+              <p className='p2 mt-3 '>
                 Using CSO data from the 2022 Survey of Income and Living
                 Conditions, it shows that an estimated 377,000 people were
                 unable to afford adequate heat. This compared to 160,000 people
@@ -30,7 +30,7 @@ export default function Pain() {
           </div>
         </div>
 
-        <div className='relative py-12 '>
+        <div className='relative py-12 text-[var(--body-color)]'>
           <div className='bg-svg-1 absolute top-0 right-0 w-full h-full -z-10 '></div>
           <div className='cont grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
             <div className='text-center lg:text-left row-start-2 lg:row-start-1'>
@@ -38,7 +38,7 @@ export default function Pain() {
                 Increasing energy bills becoming more and more difficult to keep
                 up with?
               </h2>
-              <p className='p2 mt-3 text-gray-300'>
+              <p className='p2 mt-3'>
                 As a result of the energy crisis, almost 73% of Irish people say
                 they have changed their everyday habits at home to try save on
                 energy costs.

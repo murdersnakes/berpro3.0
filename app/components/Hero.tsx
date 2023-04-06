@@ -12,10 +12,10 @@ export default function Hero() {
         className='absolute inset-0 object-cover w-full h-full'
         alt='hero image for BER pro energy saving website'
       />
-      <div className='absolute top-0 left-0 w-full h-full bg-[var(--body-color)] opacity-75'></div>
+      <div className='absolute top-0 left-0 w-full h-full bg-[var(--body-color)] opacity-50'></div>
       <div className='relative  [var(--body-color)]'>
         <svg
-          className='absolute inset-x-0 -bottom-1 text-[var(--body-color)]'
+          className='absolute inset-x-0 -bottom-1 text-neutral-300'
           viewBox='0 0 1160 163'
         >
           <path
