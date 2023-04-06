@@ -10,19 +10,23 @@ import Autoplay, {
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 
 type PropType = {
-  item: TestimonialTypes;
+  items: TestimonialTypes[];
   options?: EmblaOptionsType;
 };
 
 export default function Testimonials(props: PropType) {
-  const { item, options } = props;
+  const { items, options } = props;
   const [emblaRef] = useEmblaCarousel(options, [Autoplay({ delay: 2000 })]);
 
   return (
-    <div className='overflow-hidden bg-gray-300 pt-6 pb-12 md:pt-12 md:pb-24' ref={emblaRef}>
-      <h6 className='h2 text-[var(--body-color)] cont md:text-center mb-6'>Testimonials</h6>
+    <div
+      className='overflow-hidden bg-gray-300 pt-6 pb-12 md:pt-12 md:pb-24'
+      ref={emblaRef}
+    >
+      <h6 className='h2 text-[var(--body-color)] cont md:text-center mb-6'>
+        Testimonials
+      </h6>
       <div className='flex cont '>
-        
         {testimonialData.map((item) => {
           return (
             <div
