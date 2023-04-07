@@ -94,7 +94,7 @@ export default function Footer() {
         <ul className='flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row'>
           <li>
             <Link
-              href='/'
+              href='/frequently-asked-questions'
               className='text-sm transition-colors duration-300 hover:text-white'
             >
               F.A.Q
@@ -102,7 +102,7 @@ export default function Footer() {
           </li>
           <li>
             <Link
-              href='/'
+              href="/policies/privacy-policy"
               className='text-sm transition-colors duration-300 hover:text-white'
             >
               Privacy Policy
@@ -110,7 +110,7 @@ export default function Footer() {
           </li>
           <li>
             <Link
-              href='/'
+              href='/policies/terms-and-conditions'
               className='text-sm transition-colors duration-300 hover:text-white'
             >
               Terms &amp; Conditions

@@ -53,7 +53,7 @@
     @apply font-head text-xl font-bold leading-none sm:text-2xl
   }
   .p3{
-    @apply font-body text-xs md:text-sm
+    @apply font-body text-sm
   }
   .h4{
     @apply font-head text-lg font-bold leading-none sm:text-xl

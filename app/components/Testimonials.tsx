@@ -21,7 +21,7 @@ export default function Testimonials(props: PropType) {
   const [emblaRef] = useEmblaCarousel(options, [Autoplay()]);
 
   return (
-    <div className='embla text-[var(--text-color) bg-indigo-600'>
+    <div className='embla text-[var(--text-color) bg-indigo-700'>
       <div className='embla__viewport' ref={emblaRef}>
         <div className='embla__container'>
           {testimonialData.map((person) => (
