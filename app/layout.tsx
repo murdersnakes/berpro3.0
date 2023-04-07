@@ -19,7 +19,7 @@ const bodyFont = Open_Sans({
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' className={`${headFont.variable} ${bodyFont.variable}`}>
-      <body className='body'>
+      <body className='body overflow-x-hidden'>
         <Navbar />
         <main>{children}</main>
         <Footer />

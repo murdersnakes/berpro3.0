@@ -15,33 +15,33 @@ export default function Hero() {
 				alt='hero image for BER pro energy saving website'
 			/>
 			<div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-neutral-300 to-neutral-700/10 '></div>
-			<div className='relative  [var(--body-color)]'>
-				<div className='relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
-					<div className='flex flex-col items-center justify-between xl:flex-row'>
-						<div className='w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12'>
-							<Image
-								src={seaiLogo}
-								alt='SEAI logo'
-								className='grayscale'
-							/>
-							<h1 className='mt-12 max-w-lg mb-6 h1 font-black text-[var(--body-color)]'>
-								QQI Accredited Domestic{' '}
-								<span className='text-indigo-600'>BER Assessor</span>
-							</h1>
-							<p className='max-w-xl mb-4 p1 text-[var(--body-color)]'>
-								Get a comprehensive report fast. quick, easy, and affordable QQI
-								Accredited Domestic BER Assessment service available in Meath,
-								Louth, and Dublin.
-							</p>
-							<Link
-								href='/'
-								aria-label=''
-								className='inline-flex items-center p2 tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700'
-							>
-								Learn more
-								<FaChevronRight className='inline-block w-3 h-3 ml-2' />
-							</Link>
-						</div>
+			<div className='relative [var(--body-color)]'>
+				<div className='relative cont py-24 grid grid-cols-1 md:grid-cols-2 gap-10'>
+					<div className=''>
+						<Image
+							src={seaiLogo}
+							alt='SEAI logo'
+							className='grayscale'
+						/>
+						<h1 className='mt-12 max-w-lg mb-6 h1 font-black text-[var(--body-color)]'>
+							QQI Accredited Domestic{' '}
+							<span className='text-indigo-600'>BER Assessor</span>
+						</h1>
+						<p className='max-w-xl mb-4 p1 text-[var(--body-color)]'>
+							Get a comprehensive report fast. Affordable QQI
+							Accredited Domestic BER Assessment service available in Meath,
+							Louth, and Dublin.
+						</p>
+						<Link
+							href='/'
+							aria-label=''
+							className='inline-flex items-center p2 tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700'
+						>
+							Learn more
+							<FaChevronRight className='inline-block w-3 h-3 ml-2' />
+						</Link>
+					</div>
+					<div className='max-w-md'>
 						<Form />
 					</div>
 				</div>

@@ -4,12 +4,12 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import {
 	FaHome,
-	FaUser,
 	FaBriefcase,
 	FaEnvelope,
 	FaBook,
 	FaBars,
 	FaTimes,
+	FaSortAmountUpAlt,
 } from 'react-icons/fa';
 
 const navlinks = [
@@ -19,18 +19,13 @@ const navlinks = [
 		icon: <FaHome />,
 	},
 	{
-		name: 'About',
-		link: '/about',
-		icon: <FaUser />,
+		name: 'About BER',
+		link: '/about-ber',
+		icon: <FaSortAmountUpAlt />,
 	},
 	{
-		name: 'Services',
-		link: '/services',
-		icon: <FaBriefcase />,
-	},
-	{
-		name: 'Bookings',
-		link: '/bookings',
+		name: 'Blog',
+		link: '/blog',
 		icon: <FaBook />,
 	},
 	{

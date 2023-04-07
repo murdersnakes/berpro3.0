@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Form() {
 	return (
-		<div className='w-full max-w-xl xl:px-8 xl:w-5/12 text-[var(--body-color)]'>
+		<div className='w-full text-[var(--body-color)]'>
 			<div className='bg-neutral-100 rounded shadow-2xl p-7 sm:p-10'>
 				<h3 className='mb-4  sm:text-center sm:mb-6 h3'>Book an appointment</h3>
 				<form>

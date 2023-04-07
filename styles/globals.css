@@ -79,4 +79,7 @@
   .link{
     @apply underline hover:text-[var(--text-color-hover)] transition-all
   }
+  .link-2{
+    @apply underline hover:text-[var(--primary-color)] transition-all
+  }
 }
