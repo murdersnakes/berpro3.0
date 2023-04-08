@@ -37,7 +37,7 @@ export default function Pain() {
 						<div className='text-center lg:text-left row-start-2 lg:row-start-1'>
 							<h2 className='h2'>
 								Increasing energy bills becoming more and more difficult to keep
-								up with?😩
+								up with?
 							</h2>
 							<p className='p2 mt-3'>
 								Data from CSO&apos;s 2022 Survey of Income and Living Conditions

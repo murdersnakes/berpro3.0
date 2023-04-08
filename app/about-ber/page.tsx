@@ -1,9 +1,17 @@
 import Link from 'next/link';
 import React from 'react';
+import CalculatingBer from './CalculatingBer';
+import CalcVsMeasured from './CalcVsMeasured';
+import FactorsEffectingBer from './FactorsEffectingBer';
+import Hero from './Hero';
 
 export default function page() {
 	return (
 		<div className='bg-[var(--text-color)]'>
+			<Hero />
+			<CalcVsMeasured />
+			<CalculatingBer />
+			<FactorsEffectingBer />
 			<div className='cont py-24'>
 				<div className='prose prose-li:marker:text-[var(--body-color)] mx-auto'>
 					<h1>About Building Energy Rating (BER)</h1>
