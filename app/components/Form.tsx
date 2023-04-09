@@ -15,6 +15,7 @@ export default function Form() {
 						</label>
 						<input
 							placeholder='Joe'
+							aria-label='First name'
 							required
 							type='text'
 							className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-[var(--primary-color)] focus:outline-none focus:shadow-outline'
@@ -31,6 +32,7 @@ export default function Form() {
 						</label>
 						<input
 							placeholder='Bloggs'
+							aria-label='Last name'
 							required
 							type='text'
 							className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-[var(--primary-color)] focus:outline-none focus:shadow-outline'
@@ -47,6 +49,7 @@ export default function Form() {
 						</label>
 						<input
 							placeholder='joe.bloggs@example.ie'
+							aria-label='E-mail'
 							required
 							type='text'
 							className='flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-[var(--primary-color)] focus:outline-none focus:shadow-outline'
@@ -57,6 +60,7 @@ export default function Form() {
 					<div className='mt-4 mb-2 sm:mb-4'>
 						<button
 							type='submit'
+							aria-label='Submit'
 							className='inline-flex items-center justify-center w-full h-12 px-6 p1 tracking-wide text-[var(--text-color)] transition duration-200 rounded shadow-md bg-[var(--primary-color)] hover:bg-[var(--primary-color-hover)] focus:shadow-outline focus:outline-none'
 						>
 							Submit

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaFacebookF, FaHome, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import contact from '../../data/contactData';
 
 export default function Footer() {
 	return (
@@ -26,23 +27,23 @@ export default function Footer() {
 					<div className='flex'>
 						<p className='mr-1 '>Phone:</p>
 						<Link
-							href='tel:0896083228'
+							href={contact.phone}
 							aria-label='Our phone'
 							title='Our phone'
 							className='transition-colors duration-300 hover:text-white'
 						>
-							089 608 3228
+							{contact.phone}
 						</Link>
 					</div>
 					<div className='flex'>
 						<p className='mr-1 '>Email:</p>
 						<Link
-							href='mailto:info@berpro.ie'
+							href={contact.email}
 							aria-label='Our email'
 							title='Our email'
 							className='transition-colors duration-300 hover:text-white'
 						>
-							info@berpro.ie
+							{contact.email}
 						</Link>
 					</div>
 					<div className='flex'>
@@ -54,19 +55,25 @@ export default function Footer() {
 					<span className='text-base font-bold tracking-wide '>Socials</span>
 					<div className='flex items-center mt-1 space-x-3'>
 						<Link
-							href='/'
+							href={contact.twitter}
+							aria-label='Our twitter'
+							title='Our twitter'
 							className=' transition-colors duration-300 hover:text-white'
 						>
 							<FaTwitter />
 						</Link>
 						<Link
-							href='/'
+							href={contact.linkedin}
+							aria-label='Our linkedin'
+							title='Our linkedin'
 							className=' transition-colors duration-300 hover:text-white'
 						>
 							<FaLinkedinIn />
 						</Link>
 						<Link
-							href='/'
+							href={contact.facebook}
+							aria-label='Our facebook'
+							title='Our facebook'
 							className=' transition-colors duration-300 hover:text-white'
 						>
 							<FaFacebookF />
@@ -79,12 +86,14 @@ export default function Footer() {
 			</div>
 			<div className='flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row'>
 				<p className='text-sm'>
-					© Copyright {new Date().getFullYear()} Lorem Inc. All rights reserved.
+					© Copyright {new Date().getFullYear()} BERpro. All rights reserved.
 				</p>
 				<ul className='flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row'>
 					<li>
 						<Link
 							href='/frequently-asked-questions'
+							aria-label='Our F.A.Q'
+							title='Our F.A.Q'
 							className='text-sm transition-colors duration-300 hover:text-white'
 						>
 							F.A.Q
@@ -93,6 +102,8 @@ export default function Footer() {
 					<li>
 						<Link
 							href='/policies/privacy-policy'
+							aria-label='Our Privacy Policy'
+							title='Our Privacy Policy'
 							className='text-sm transition-colors duration-300 hover:text-white'
 						>
 							Privacy Policy
@@ -101,6 +112,8 @@ export default function Footer() {
 					<li>
 						<Link
 							href='/policies/terms-and-conditions'
+							aria-label='Our Terms &amp; Conditions'
+							title='Our Terms &amp; Conditions'
 							className='text-sm transition-colors duration-300 hover:text-white'
 						>
 							Terms &amp; Conditions

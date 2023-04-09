@@ -33,14 +33,6 @@ export default function Hero() {
 							renting your home? Looking for SEAI grants to upgrade your energy
 							systems? BERpro has got you covered.
 						</p>
-						<Link
-							href='/'
-							aria-label=''
-							className='inline-flex items-center p2 tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700'
-						>
-							Learn more
-							<FaChevronRight className='inline-block w-3 h-3 ml-2' />
-						</Link>
 					</div>
 					<div className='max-w-md'>
 						<Form />

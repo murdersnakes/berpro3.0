@@ -12,7 +12,7 @@ export default function Pain() {
 					<div className=' cont  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center '>
 						<Image
 							src={image1}
-							alt=''
+							alt='confused woman about BER illustration'
 							className='w-full px-[17%] lg:px-[22%]'
 						/>
 						<div className='text-center lg:text-left '>
@@ -49,7 +49,7 @@ export default function Pain() {
 						</div>
 						<Image
 							src={image2}
-							alt=''
+							alt='Confused woman at lightbulb illustration'
 							className='w-full px-[17%] lg:px-[22%]'
 						/>
 					</div>
@@ -59,7 +59,7 @@ export default function Pain() {
 					<div className='cont grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 						<Image
 							src={image3}
-							alt=''
+							alt='confident man about green energy illustration'
 							className='w-full px-[17%] lg:px-[22%]'
 						/>
 						<div className='text-center lg:text-left '>

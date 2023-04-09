@@ -4,6 +4,9 @@ import CTA from './components/CTA'
 import Hero from './components/Hero'
 import Pain from './components/Pain'
 import Testimonials from './components/Testimonials'
+import { Metadata } from 'next'
+
+
 
 export default function page() {
   return (

@@ -6,7 +6,7 @@ import gIcon from '../../public/g_rating_icon_1.svg';
 
 export default function Hero() {
 	return (
-		<div className='text-[var(--body-color)]'>
+		<div className='text-[var(--body-color)] bg-[var(--text-color)]'>
 			<div className='cont pt-24 pb-12'>
 				<div className='grid gap-5 row-gap-8 lg:grid-cols-2'>
 					<div className='flex flex-col justify-center'>

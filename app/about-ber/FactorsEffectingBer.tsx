@@ -1,9 +1,16 @@
 import React from 'react';
 import { FaAddressBook, FaHouseDamage } from 'react-icons/fa';
+import { FiMinimize } from 'react-icons/fi';
+import { RxValueNone } from 'react-icons/rx';
+import { CgTemplate } from 'react-icons/cg';
+import { TbDoor } from 'react-icons/tb';
+import { AiFillControl } from 'react-icons/ai';
+import { HiLightBulb } from 'react-icons/hi';
+import { TbRecycle } from 'react-icons/tb';
 
 export default function FactorsEffectingBer() {
 	return (
-		<div className='text-[var(--body-color)]'>
+		<div className='bg-emerald-300 text-[var(--body-color)] '>
 			<div className='cont py-24'>
 				<div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
 					<h2 className='max-w-lg mb-4 h2 md:mx-auto'>
@@ -14,11 +21,11 @@ export default function FactorsEffectingBer() {
 						including:
 					</p>
 				</div>
-				<div className='grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x'>
+				<div className='grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x lg:divide-emerald-500'>
 					<div className='space-y-6 sm:px-16'>
 						<div className='flex flex-col max-w-md sm:flex-row'>
 							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white'>
+								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
 									<FaHouseDamage />
 								</div>
 							</div>
@@ -35,8 +42,8 @@ export default function FactorsEffectingBer() {
 						</div>
 						<div className='flex flex-col max-w-md sm:flex-row'>
 							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white'>
-									<FaAddressBook />
+								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+									<FiMinimize />
 								</div>
 							</div>
 							<div>
@@ -49,8 +56,8 @@ export default function FactorsEffectingBer() {
 						</div>
 						<div className='flex flex-col max-w-md sm:flex-row'>
 							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white'>
-									<FaAddressBook />
+								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+									<RxValueNone />
 								</div>
 							</div>
 							<div>
@@ -66,8 +73,8 @@ export default function FactorsEffectingBer() {
 						</div>
 						<div className='flex flex-col max-w-md sm:flex-row'>
 							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white'>
-									<FaAddressBook />
+								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+									<CgTemplate />
 								</div>
 							</div>
 							<div>
@@ -84,8 +91,8 @@ export default function FactorsEffectingBer() {
 					<div className='space-y-6 sm:px-16'>
 						<div className='flex flex-col max-w-md sm:flex-row'>
 							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white'>
-									<FaAddressBook />
+								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+									<TbDoor />
 								</div>
 							</div>
 							<div>
@@ -101,8 +108,8 @@ export default function FactorsEffectingBer() {
 						</div>
 						<div className='flex flex-col max-w-md sm:flex-row'>
 							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white'>
-									<FaAddressBook />
+								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+									<AiFillControl />
 								</div>
 							</div>
 							<div>
@@ -117,8 +124,8 @@ export default function FactorsEffectingBer() {
 						</div>
 						<div className='flex flex-col max-w-md sm:flex-row'>
 							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white'>
-									<FaAddressBook />
+								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+									<HiLightBulb />
 								</div>
 							</div>
 							<div>
@@ -133,8 +140,8 @@ export default function FactorsEffectingBer() {
 						</div>
 						<div className='flex flex-col max-w-md sm:flex-row'>
 							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white'>
-									<FaAddressBook />
+								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+									<TbRecycle />
 								</div>
 							</div>
 							<div>

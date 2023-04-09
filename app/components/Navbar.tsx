@@ -53,6 +53,8 @@ export default function Navbar() {
 			<div className='cont flex justify-between py-2'>
 				<Link
 					href='/'
+					aria-label='Berpro, Back to homepage'
+					title='Berpro, Back to homepage'
 					className='h3 font-black uppercase flex items-center'
 				>
 					<FaHome />
@@ -60,6 +62,8 @@ export default function Navbar() {
 				</Link>
 				<button
 					onClick={handleMenu}
+					aria-label='Open Menu'
+					title='Open Menu'
 					className='flex p-3 md:hidden justify-center items-center rounded bg-[var(--body-color-hover)] bg-opacity-50'
 				>
 					{isOpen ? <FaTimes /> : <FaBars />}
@@ -77,6 +81,8 @@ export default function Navbar() {
 							>
 								<Link
 									href={link.link}
+									aria-label={link.name}
+									title={link.name}
 									className='flex px-4 py-3 items-center gap-1 rounded hover:bg-[var(--body-color-hover)] '
 								>
 									{link.icon}
