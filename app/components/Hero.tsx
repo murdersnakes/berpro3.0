@@ -13,6 +13,7 @@ export default function Hero() {
 				src={hero}
 				className='absolute object-cover w-full h-full grayscale'
 				alt='hero image for BER pro energy saving website'
+				priority
 			/>
 			<div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-neutral-300 to-neutral-700/10 '></div>
 			<div className='relative [var(--body-color)]'>

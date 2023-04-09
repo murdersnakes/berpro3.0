@@ -4,8 +4,8 @@ export default function CalcVsMeasured() {
 	return (
 		<div className='bg-[var(--body-color)] text-[var(--text-color)]'>
 			<div className='cont py-24 '>
-				<div className='max-w-xl mb-10 text-center md:text-left lg:max-w-2xl md:mb-12'>
-					<h2 className='max-w-lg mb-4 h2'>
+				<div className='max-w-xl mb-10 text-center mx-auto lg:max-w-2xl md:mb-12'>
+					<h2 className='max-w-lg mx-auto mb-4 h2'>
 						Calculated Energy Consumption vs. Measured Energy Consumption
 					</h2>
 					<p className='p1'>

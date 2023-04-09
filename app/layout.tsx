@@ -3,7 +3,7 @@ import '../styles/globals.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import { Archivo, Open_Sans } from 'next/font/google';
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
 	title: 'BERpro: BER Assessments & Certificates for Energy-Efficient Homes',
@@ -20,40 +20,59 @@ export const metadata: Metadata = {
 		'energy assessment',
 		'BER assessor',
 	],
-
-	icons: {
-		icon: '/public/favicon.ico',
-		shortcut: '/public/favicon.ico',
-		apple: '/public/apple-touch-icon.png',
-	},
-	manifest: '/public/site.webmanifest',
-	generator: 'Next.js',
-	applicationName: 'BERpro',
-	referrer: 'origin-when-cross-origin',
-	viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-	authors: { name: "Michael O'Reilly" },
-	colorScheme: 'dark',
-	creator: "Michael O'Reilly",
-	publisher: "Michael O'Reilly",
-	formatDetection: {
-		email: false,
-		address: false,
-		telephone: false,
-	},
 	robots: {
-		index: false,
+		index: true,
 		follow: true,
 		nocache: true,
 		googleBot: {
 			index: true,
 			follow: false,
-			noimageindex: true,
+			noimageindex: false,
 			'max-video-preview': -1,
 			'max-image-preview': 'large',
 			'max-snippet': -1,
 		},
 	},
-	themeColor: 'black',
+	viewport: 'width=device-width, initial-scale=1',
+	generator: 'Next.js',
+	applicationName: 'Next.js',
+	referrer: 'origin-when-cross-origin',
+	authors: { name: "Michael O' Reilly" },
+	colorScheme: 'dark',
+	creator: "Michael O' Reilly",
+	publisher: "Michael O' Reilly",
+	formatDetection: {
+		email: true,
+		address: true,
+		telephone: true,
+	},
+	openGraph: {
+		title: 'BERpro: BER Assessments & Certificates for Energy-Efficient Homes',
+		description:
+			'BERpro is a BER assessment and certificate provider for energy-efficient homes in Meath, Louth & Dublin. We provide BER assessments and certificates for homes fast.',
+		url: 'https://berpro.ie',
+		siteName: 'BERpro.ie',
+		images: [
+			{
+				url: '../public/hero.webp',
+				width: 800,
+				height: 600,
+			},
+			{
+				url: '../public/hero.webp',
+				width: 1800,
+				height: 1600,
+				alt: 'My custom alt',
+			},
+		],
+		locale: 'en-IE',
+		type: 'website',
+	},
+	icons: {
+		icon: '../public/favicon-32x32.png',
+		shortcut: '../public/favicon-32x32.png',
+		apple: '../public/apple-touch-icon.png',
+	},
 };
 
 const headFont = Archivo({
@@ -71,10 +90,10 @@ const bodyFont = Open_Sans({
 export default function layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html
-			lang='en'
+			lang="en"
 			className={`${headFont.variable} ${bodyFont.variable}`}
 		>
-			<body className='body overflow-x-hidden'>
+			<body className="body overflow-x-hidden">
 				<Navbar />
 				<main>{children}</main>
 				<Footer />
