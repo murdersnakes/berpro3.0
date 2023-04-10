@@ -10,143 +10,143 @@ import { TbRecycle } from 'react-icons/tb';
 
 export default function FactorsEffectingBer() {
 	return (
-		<div className='bg-emerald-300 text-[var(--body-color)] '>
-			<div className='cont py-24'>
-				<div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
-					<h4 className='max-w-lg mb-4 h2 md:mx-auto'>
+		<div className="bg-[var(--text-color)] text-[var(--body-color)] ">
+			<div className="cont py-24">
+				<div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+					<h4 className="max-w-lg mb-4 h2 md:mx-auto">
 						Factors Affecting a BER
 					</h4>
-					<p className='p1'>
+					<p className="p1">
 						The rating a property receives can be affected by various factors,
 						including:
 					</p>
 				</div>
-				<div className='grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x lg:divide-emerald-500'>
-					<div className='space-y-6 sm:px-16'>
-						<div className='flex flex-col max-w-md sm:flex-row'>
-							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+				<div className="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x lg:divide-indigo-500">
+					<div className="space-y-6 sm:px-16">
+						<div className="flex flex-col max-w-md sm:flex-row">
+							<div className="mb-4 mr-4">
+								<div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-[var(--text-color)] text-2xl">
 									<FaHouseDamage />
 								</div>
 							</div>
 							<div>
-								<h5 className='mb-3 text-xl font-bold leading-5'>
+								<h5 className="mb-3 text-xl font-bold leading-5">
 									Age of construction
 								</h5>
-								<p className='text-sm text-gray-900'>
+								<p className="text-sm text-gray-900">
 									The age of a building can affect its insulation, ventilation,
 									and heating system, making it important for energy efficiency
 									assessments.
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col max-w-md sm:flex-row'>
-							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+						<div className="flex flex-col max-w-md sm:flex-row">
+							<div className="mb-4 mr-4">
+								<div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-[var(--text-color)] text-2xl">
 									<FiMinimize />
 								</div>
 							</div>
 							<div>
-								<h5 className='mb-3 text-xl font-bold leading-5'>Floor area</h5>
-								<p className='text-sm text-gray-900'>
+								<h5 className="mb-3 text-xl font-bold leading-5">Floor area</h5>
+								<p className="text-sm text-gray-900">
 									The size of a building impacts its energy consumption, and the
 									larger the floor area, the more energy it may consume.
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col max-w-md sm:flex-row'>
-							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+						<div className="flex flex-col max-w-md sm:flex-row">
+							<div className="mb-4 mr-4">
+								<div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-[var(--text-color)] text-2xl">
 									<RxValueNone />
 								</div>
 							</div>
 							<div>
-								<h5 className='mb-3 text-xl font-bold leading-5'>
+								<h5 className="mb-3 text-xl font-bold leading-5">
 									Default values
 								</h5>
-								<p className='text-sm text-gray-900'>
+								<p className="text-sm text-gray-900">
 									Default values provide a standardised approach to calculating
 									energy efficiency and rating in cases where no information is
 									available.
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col max-w-md sm:flex-row'>
-							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+						<div className="flex flex-col max-w-md sm:flex-row">
+							<div className="mb-4 mr-4">
+								<div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-[var(--text-color)] text-2xl">
 									<CgTemplate />
 								</div>
 							</div>
 							<div>
-								<h5 className='mb-3 text-xl font-bold leading-5'>
+								<h5 className="mb-3 text-xl font-bold leading-5">
 									Thermal insulation
 								</h5>
-								<p className='text-sm text-gray-900'>
+								<p className="text-sm text-gray-900">
 									Proper insulation helps to reduce heat loss, keeping the
 									property warm and energy-efficient.
 								</p>
 							</div>
 						</div>
 					</div>
-					<div className='space-y-6 sm:px-16'>
-						<div className='flex flex-col max-w-md sm:flex-row'>
-							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+					<div className="space-y-6 sm:px-16">
+						<div className="flex flex-col max-w-md sm:flex-row">
+							<div className="mb-4 mr-4">
+								<div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-[var(--text-color)] text-2xl">
 									<TbDoor />
 								</div>
 							</div>
 							<div>
-								<h5 className='mb-3 text-xl font-bold leading-5'>
+								<h5 className="mb-3 text-xl font-bold leading-5">
 									Windows and doors
 								</h5>
-								<p className='text-sm text-gray-900'>
+								<p className="text-sm text-gray-900">
 									Energy-efficient windows and doors reduce heat loss and
 									prevent draughts, improving a building&apos;s energy
 									efficiency.
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col max-w-md sm:flex-row'>
-							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+						<div className="flex flex-col max-w-md sm:flex-row">
+							<div className="mb-4 mr-4">
+								<div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-[var(--text-color)] text-2xl">
 									<AiFillControl />
 								</div>
 							</div>
 							<div>
-								<h5 className='mb-3 text-xl font-bold leading-5'>
+								<h5 className="mb-3 text-xl font-bold leading-5">
 									Heating systems and controls
 								</h5>
-								<p className='text-sm text-gray-900'>
+								<p className="text-sm text-gray-900">
 									Efficient heating systems and controls help to reduce energy
 									consumption and improve energy efficiency.
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col max-w-md sm:flex-row'>
-							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+						<div className="flex flex-col max-w-md sm:flex-row">
+							<div className="mb-4 mr-4">
+								<div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-[var(--text-color)] text-2xl">
 									<HiLightBulb />
 								</div>
 							</div>
 							<div>
-								<h5 className='mb-3 text-xl font-bold leading-5'>
+								<h5 className="mb-3 text-xl font-bold leading-5">
 									Light fittings
 								</h5>
-								<p className='text-sm text-gray-900'>
+								<p className="text-sm text-gray-900">
 									Energy-efficient light fittings can save on electricity bills
 									and reduce energy consumption.
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col max-w-md sm:flex-row'>
-							<div className='mb-4 mr-4'>
-								<div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-900 text-[var(--text-color)] text-2xl'>
+						<div className="flex flex-col max-w-md sm:flex-row">
+							<div className="mb-4 mr-4">
+								<div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-[var(--text-color)] text-2xl">
 									<TbRecycle />
 								</div>
 							</div>
 							<div>
-								<h5 className='mb-3 text-xl font-bold leading-5'>Renewables</h5>
-								<p className='text-sm text-gray-900'>
+								<h5 className="mb-3 text-xl font-bold leading-5">Renewables</h5>
+								<p className="text-sm text-gray-900">
 									Incorporating renewable energy sources, such as solar panels,
 									can help to reduce a building&apos;s reliance on non-renewable
 									energy sources and improve its energy rating.

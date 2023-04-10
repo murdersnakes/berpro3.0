@@ -5,7 +5,7 @@ export default function WhyChooseUs() {
 	return (
 		<div>
 			<div>
-				<h2>Why Choose BERpro?</h2>
+				<h6>Why Choose BERpro?</h6>
 				<p>
 					At BERpro, our experienced assessors are dedicated to providing
 					accurate, reliable, and professional Building Energy Rating
