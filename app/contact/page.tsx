@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
+import contact from '../../data/contactData';
 import Form from '../components/Form';
 
 export default function page() {
@@ -18,15 +19,15 @@ export default function page() {
 						<div className='mt-12 flex items-center gap-6'>
 							<Link
 								className='flex items-center gap-2 h3 hover:text-white transition-colors duration-300'
-								href='tel:0896083228'
+								href={`tel:${contact.phone}`}
 							>
-								<FaPhone /> 0896083228
+								<FaPhone /> {contact.phone}
 							</Link>
 							<Link
 								className='flex items-center gap-2 h3 hover:text-white transition-colors duration-300'
-								href='mailto:info@berpro.ie'
+								href={`mailto:${contact.email}`}
 							>
-								<FaEnvelope /> info@berpro.ie
+								<FaEnvelope /> {contact.email}
 							</Link>
 						</div>
 					</div>

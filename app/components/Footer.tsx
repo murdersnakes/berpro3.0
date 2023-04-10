@@ -27,7 +27,7 @@ export default function Footer() {
 					<div className='flex'>
 						<p className='mr-1 '>Phone:</p>
 						<Link
-							href={contact.phone}
+							href={`tel:${contact.phone}`}
 							aria-label='Our phone'
 							title='Our phone'
 							className='transition-colors duration-300 hover:text-white'
@@ -38,7 +38,7 @@ export default function Footer() {
 					<div className='flex'>
 						<p className='mr-1 '>Email:</p>
 						<Link
-							href={contact.email}
+							href={`mailto:${contact.email}`}
 							aria-label='Our email'
 							title='Our email'
 							className='transition-colors duration-300 hover:text-white'

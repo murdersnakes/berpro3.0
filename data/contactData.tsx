@@ -1,6 +1,6 @@
 const contact = {
-	phone: 'tel:0862488399',
-	email: 'mailto:info@berpro.ie',
+	phone: '0862488399',
+	email: 'info@berpro.ie',
 	facebook: 'https://www.facebook.com/berpro.ie',
 	linkedin: 'https://www.linkedin.com/company/berpro',
 	twitter: 'https://twitter.com/berpro_ie',
