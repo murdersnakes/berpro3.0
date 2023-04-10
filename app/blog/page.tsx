@@ -1,41 +1,113 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import blogPosts from '../../data/blogPosts';
+import blogPosts, {BlogPosts} from '../../data/blogPosts';
 
-export default function page() {
+export default function page() : JSX.Element {
+
+	const data: BlogPosts[] = blogPosts;
 	return (
-		<div>
-			<div className='cont py-24'>
-				<h1 className='h1'>Blog Posts</h1>
-				<div className='mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10'>
-					{blogPosts.map((post) => {
+		<div className='text-[var(--text-color)]'>
+			<div className="cont py-24">
+				<div className="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+					{data.map((post) => {
 						return (
-							<Link
-								href={`/blog/${post.slug}`}
+							<div
 								key={post.id}
-								className='group bg-[var(--text-color)] text-[var(--body-color)] rounded-lg h-[470px] shadow-lg overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow'
+								className="overflow-hidden transition-shadow duration-300 rounded"
 							>
-								<Image
-									src={`/${post.image}`}
-									width='500'
-									height='500'
-									priority
-									alt={post.title}
-									className='object-cover w-full h-2/5 grayscale'
-								/>
-								<div className='p-6 flex flex-col h-1/2 justify-between'>
-									<div>
-										<h2 className='h3 group-hover:text-indigo-700 transition-colors duration-300'>
-											{post.title}
-										</h2>
-										<p className='mt-2 p4 uppercase w-full flex justify-between'>
-											{post.date} | {post.author}
-										</p>
-										<p className='mt-4 p3 line-clamp-4'>{post.excerpt}</p>
+								<Link
+									href={`/blog/${post.slug}`}
+									aria-label={post.title}
+								>
+									<Image
+										src={post.image}
+										width={500}
+										height={500}
+										className="object-cover w-full h-64 rounded"
+										alt={post.title}
+									/>
+								</Link>
+								<div className="py-5">
+									<p className="mb-2 p4 uppercase">
+										{post.date}
+									</p>
+									<Link
+										href="/"
+										aria-label="Blog post tile link"
+										className="inline-block mb-3 transition-colors duration-200 hover:text-white"
+									>
+										<p className="h3">{post.title}</p>
+									</Link>
+									<p className="mb-4 p3 line-clamp-3">{post.excerpt}</p>
+									<div className="flex space-x-4">
+										<Link
+											href={`/blog/${post.slug}`}
+											aria-label="Likes"
+											className="flex items-start transition-colors duration-200 hover:text-white"
+										>
+											<div className="mr-2">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													stroke="currentColor"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													strokeWidth="2"
+													className="w-5 h-5 text-gray-600 transition-colors duration-200 group-hover:text-deep-purple-accent-700"
+												>
+													<polyline
+														points="6 23 1 23 1 12 6 12"
+														fill="none"
+														strokeMiterlimit="10"
+													/>
+													<path
+														d="M6,12,9,1H9a3,3,0,0,1,3,3v6h7.5a3,3,0,0,1,2.965,3.456l-1.077,7A3,3,0,0,1,18.426,23H6Z"
+														fill="none"
+														stroke="currentColor"
+														strokeMiterlimit="10"
+													/>
+												</svg>
+											</div>
+											<p className="font-semibold">{post.likes}</p>
+										</Link>
+										<Link
+											href={`/blog/${post.slug}`}
+											aria-label="Comments"
+											className="flex items-start transition-colors duration-200 hover:text-white group"
+										>
+											<div className="mr-2">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													strokeWidth="2"
+													stroke="currentColor"
+													className="w-5 h-5 text-gray-600 transition-colors duration-200 group-hover:text-deep-purple-accent-700"
+												>
+													<polyline
+														points="23 5 23 18 19 18 19 22 13 18 12 18"
+														fill="none"
+														strokeMiterlimit="10"
+													/>
+													<polygon
+														points="19 2 1 2 1 14 5 14 5 19 12 14 19 14 19 2"
+														fill="none"
+														stroke="currentColor"
+														strokeMiterlimit="10"
+													/>
+												</svg>
+											</div>
+											<p className="font-semibold">{post.comments}</p>
+										</Link>
 									</div>
 								</div>
-							</Link>
+							</div>
 						);
 					})}
 				</div>

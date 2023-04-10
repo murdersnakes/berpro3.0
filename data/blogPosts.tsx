@@ -1,5 +1,3 @@
-
-
 const blogPosts = [
 	{
 		id: 1,
@@ -8,8 +6,10 @@ const blogPosts = [
 		title: 'How to Prepare Your Paperwork for a Successful BER Assessment',
 		slug: 'how-to-prepare-your-paperwork-for-a-successful-ber-assessment',
 		date: '09 Jul 2021',
-		image: "hero.webp",
-        author:"Michael O'Reilly",
+		image: '/hero.webp',
+		author: "Michael O'Reilly",
+		likes: 102,
+		comments: 0,
 		excerpt:
 			'If you are planning to have a Building Energy Rating (BER) assessment for your property, it is important to prepare all necessary paperwork and documents in advance. This will not only help you receive your BER certificate and advisory report in a timely manner but also ensure that you achieve the best possible rating for your property. Here are some tips on how to prepare your paperwork for a successful BER assessment.',
 		keywords:
@@ -22,8 +22,10 @@ const blogPosts = [
 		title: 'Some other blog post',
 		slug: 'some-other-blog-post',
 		date: '22 Sep 2021',
-		image: "hero.webp",
-        author:"Michael O'Reilly",
+		image: '/hero.webp',
+		author: "Michael O'Reilly",
+		likes: 21,
+		comments: 0,
 		excerpt:
 			'If you are planning to have a Building Energy Rating (BER) assessment for your property, it is important to prepare all necessary paperwork and documents in advance. This will not only help you receive your BER certificate and advisory report in a timely manner but also ensure that you achieve the best possible rating for your property. Here are some tips on how to prepare your paperwork for a successful BER assessment.',
 		keywords:
@@ -33,16 +35,16 @@ const blogPosts = [
 
 export default blogPosts;
 
-export interface BlogPostType {
+export interface BlogPosts {
 	id: number;
 	content: string;
 	title: string;
 	slug: string;
 	date: string;
-	image: {
-        hero: string;
-    };
+	image: string;
 	excerpt: string;
 	keywords: string;
-    author: string;
+	author: string;
+	likes: number;
+	comments: number;
 }
