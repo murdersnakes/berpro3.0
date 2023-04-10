@@ -29,7 +29,7 @@ export default function Testimonials(props: PropType) {
 				<div className='embla__container'>
 					{testimonialData.map((person) => (
 						<div
-							className='embla__slide cursor-grab'
+							className='embla__slide cursor-grab bg-indigo-800 mr-5 p-5 rounded'
 							key={person.id}
 						>
 							<div className='embla__slide__number'>

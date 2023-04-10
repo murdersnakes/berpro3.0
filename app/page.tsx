@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import Pain from './components/Pain'
 import Testimonials from './components/Testimonials'
 import { Metadata } from 'next'
+import Pricing from './components/Pricing'
 
 
 
@@ -15,6 +16,7 @@ export default function page() {
         <Pain />
         <CTA />
         <Benefits />
+        <Pricing />
         <Testimonials Autoplay={ undefined } />
         
     </div>

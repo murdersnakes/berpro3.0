@@ -69,8 +69,8 @@ export const metadata: Metadata = {
 		type: 'website',
 	},
 	icons: {
-		icon: '../public/favicon-32x32.png',
-		shortcut: '../public/favicon-32x32.png',
+		icon: {url: '../public/favicon.ico', type: 'image/x-icon'},
+		shortcut: '../public/favicon.ico',
 		apple: '../public/apple-touch-icon.png',
 	},
 };

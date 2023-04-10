@@ -61,7 +61,7 @@ export default function Form() {
 						<button
 							type='submit'
 							aria-label='Submit'
-							className='inline-flex items-center justify-center w-full h-12 px-6 p1 tracking-wide text-[var(--text-color)] transition duration-200 rounded shadow-md bg-[var(--primary-color)] hover:bg-[var(--primary-color-hover)] focus:shadow-outline focus:outline-none'
+							className='inline-flex items-center justify-center w-full h-12 px-6 p1 tracking-wide text-white transition duration-200 rounded shadow-md bg-[var(--primary-color)] hover:bg-[var(--primary-color-hover)] focus:shadow-outline focus:outline-none'
 						>
 							Submit
 						</button>

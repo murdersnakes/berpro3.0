@@ -8,7 +8,7 @@ export default function Pain() {
 	return (
 		<div>
 			<div className=''>
-				<div className='py-24 bg-neutral-300 text-[var(--body-color)]'>
+				<div className='py-24 bg-indigo-300 text-[var(--body-color)]'>
 					<div className=' cont  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center '>
 						<Image
 							src={image1}
@@ -31,37 +31,9 @@ export default function Pain() {
 					</div>
 				</div>
 
-				<div className='relative py-24 text-[var(--body-color)]'>
-					<div className='bg-svg-1 absolute top-0 right-0 w-full h-full -z-10 '></div>
-					<div className='cont grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-						<div className='text-center lg:text-left row-start-2 lg:row-start-1'>
-							<h2 className='h2'>
-								Increasing energy bills becoming more and more difficult to keep
-								up with?
-							</h2>
-							<p className='p2 mt-3'>
-								Data from CSO&apos;s 2022 Survey of Income and Living Conditions
-								revealed that 377,000 people in Ireland couldn&apos;t afford adequate
-								heating, compared to 160,000 in 2021. Due to the energy crisis,
-								about 73% of Irish people have changed their daily habits at
-								home to save on energy costs.
-							</p>
-						</div>
-						<Image
-							src={image2}
-							alt='Confused woman at lightbulb illustration'
-							className='w-full px-[17%] lg:px-[22%]'
-						/>
-					</div>
-				</div>
-
 				<div className='py-24 bg-[var(--body-color)]'>
 					<div className='cont grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-						<Image
-							src={image3}
-							alt='confident man about green energy illustration'
-							className='w-full px-[17%] lg:px-[22%]'
-						/>
+						
 						<div className='text-center lg:text-left '>
 							<h2 className='h2'>
 								That&apos;s where{' '}
@@ -79,6 +51,11 @@ export default function Pain() {
 								expenses.
 							</p>
 						</div>
+						<Image
+							src={image3}
+							alt='confident man about green energy illustration'
+							className='w-full px-[17%] lg:px-[22%]'
+						/>
 					</div>
 				</div>
 			</div>

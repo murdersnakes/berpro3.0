@@ -6,8 +6,8 @@ import image2 from '../../public/compare.svg';
 
 export default function CalculatingBer() {
 	return (
-		<div className=''>
-			<div className='relative py-24 text-[var(--text-color)] bg-indigo-800'>
+		<div className='text-[var(--body-color)] bg-[var(--text-color)]'>
+			<div className='relative py-24'>
 				<div className='relative cont  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center '>
 					<Image
 						src={image1}
@@ -15,7 +15,7 @@ export default function CalculatingBer() {
 						className='w-full '
 					/>
 					<div className='text-center lg:text-left '>
-						<h2 className='h2'>Calculating a BER</h2>
+						<h4 className='h2'>Calculating a BER</h4>
 						<p className='p2 mt-3 '>
 							A BER is determined by the amount of energy a home requires for
 							space and hot water heating, ventilation, and lighting. The
@@ -36,10 +36,10 @@ export default function CalculatingBer() {
 				</div>
 			</div>
 
-			<div className='relative py-24 text-[var(--body-color)] bg-[var(--text-color)]'>
+			<div className='relative py-24'>
 				<div className='cont grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 					<div className='text-center lg:text-left row-start-2 lg:row-start-1'>
-						<h2 className='h2'>On a like-for-like basis</h2>
+						<h4 className='h2'>On a like-for-like basis</h4>
 						<p className='p2 mt-3'>
 							The BER energy rating focuses on the building itself, its fabric,
 							and installed systems, rather than the energy consumption of the

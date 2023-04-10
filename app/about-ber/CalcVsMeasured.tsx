@@ -5,9 +5,9 @@ export default function CalcVsMeasured() {
 		<div className='bg-[var(--body-color)] text-[var(--text-color)]'>
 			<div className='cont py-24 '>
 				<div className='max-w-xl mb-10 text-center mx-auto lg:max-w-2xl md:mb-12'>
-					<h2 className='max-w-lg mx-auto mb-4 h2'>
+					<h3 className='max-w-lg mx-auto mb-4 h2'>
 						Calculated Energy Consumption vs. Measured Energy Consumption
-					</h2>
+					</h3>
 					<p className='p1'>
 						Building Energy Rating (BER) allows for an objective comparison of
 						different dwellings&apos; energy performance, focusing on asset
@@ -18,9 +18,9 @@ export default function CalcVsMeasured() {
 				<div className='flex flex-col border rounded shadow-sm md:justify-center lg:flex-row'>
 					<div className='flex flex-col justify-between p-5 border-b sm:p-10 lg:border-b-0 lg:border-r lg:w-1/2'>
 						<div>
-							<h5 className='max-w-md mb-6 h2'>
+							<h4 className='max-w-md mb-6 h2'>
 								Calculated Energy Consumption
-							</h5>
+							</h4>
 							<p className='mt-6 mb-2 p3 font-semibold tracking-wide text-indigo-300'>
 								Key features include:
 							</p>
@@ -57,7 +57,7 @@ export default function CalcVsMeasured() {
 
 					<div className='flex flex-col justify-between p-5 sm:p-10 lg:w-1/2'>
 						<div>
-							<h5 className='max-w-md mb-6 h2'>Measured Energy Consumption</h5>
+							<h4 className='max-w-md mb-6 h2'>Measured Energy Consumption</h4>
 							<p className='mt-6 mb-2 p3 font-semibold tracking-wide text-indigo-300'>
 								Key features include:
 							</p>

@@ -12,9 +12,9 @@ export default function Prepare() {
 							The BER Assessment Process
 						</p>
 					</div>
-					<h2 className='max-w-lg mb-6 h2 md:mx-auto'>
+					<h4 className='max-w-lg mb-6 h2 md:mx-auto'>
 						Preparing for Your Assessment
-					</h2>
+					</h4>
 					<p className='p2'>
 						A BER assessor collects all necessary information during an
 						assessment of your home. They survey each room in the house,
@@ -40,7 +40,7 @@ export default function Prepare() {
 							</div>
 						</div>
 						<div>
-							<h6 className='mb-2 h3'>Gather Relevant Paperwork</h6>
+							<h5 className='mb-2 h3'>Gather Relevant Paperwork</h5>
 
 							<ul className='mb-4 -ml-1 space-y-2 p3'>
 								<li className='flex items-start'>
@@ -97,7 +97,7 @@ export default function Prepare() {
 							</div>
 						</div>
 						<div>
-							<h6 className='mb-2 h3'>Prepare Your Home</h6>
+							<h5 className='mb-2 h3'>Prepare Your Home</h5>
 
 							<ul className='mb-4 -ml-1 space-y-2 p3'>
 								<li className='flex items-start'>
