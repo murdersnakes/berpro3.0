@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
 import blogPosts, { BlogPosts } from '../../../data/blogPosts';
+import Metadata from 'next';
 
 export default function page({ params }) {
 	const data: BlogPosts[] = blogPosts;
-
 	const post = data.find((post): boolean => post.slug === params.slug);
 
 	return (

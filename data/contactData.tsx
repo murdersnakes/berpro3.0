@@ -3,7 +3,7 @@ const contact = {
 	email: 'info@berpro.ie',
 	facebook: 'https://www.facebook.com/berpro.ie',
 	linkedin: 'https://www.linkedin.com/company/berpro',
-	twitter: 'https://twitter.com/berpro_ie',
+	twitter: 'https://twitter.com/BERpro_ireland',
 };
 
 export default contact;
