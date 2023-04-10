@@ -33,7 +33,7 @@ export default function page() : JSX.Element {
 										{post.date}
 									</p>
 									<Link
-										href="/"
+										href={`/blog/${post.slug}`}
 										aria-label="Blog post tile link"
 										className="inline-block mb-3 transition-colors duration-200 hover:text-white"
 									>
