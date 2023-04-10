@@ -4,7 +4,7 @@ export default function Form() {
 	return (
 		<div className='w-full text-[var(--body-color)]'>
 			<div className='bg-neutral-100 rounded shadow-2xl p-7 sm:p-10'>
-				<h3 className='mb-4  sm:text-center sm:mb-6 h3'>Book an appointment</h3>
+				<h2 className='mb-4  sm:text-center sm:mb-6 h3'>Book an appointment</h2>
 				<form>
 					<div className='mb-1 sm:mb-2'>
 						<label
