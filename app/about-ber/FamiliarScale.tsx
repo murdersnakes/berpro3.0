@@ -22,8 +22,8 @@ export default function FamiliarScale() {
 							<Image
 								src={aIcon}
 								alt="a rating icon for BER"
-                                priority
-                                quality={50}
+                                
+                               
 							/>
 						</div>
 

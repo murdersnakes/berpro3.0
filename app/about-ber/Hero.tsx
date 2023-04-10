@@ -33,6 +33,8 @@ export default function Hero() {
 						src={ratingScale}
 						alt="BER rating scale illustration"
 						className='rounded-lg shadow-xl'
+						priority
+						quality={50}
 					/>
 				</div>
 			</div>
