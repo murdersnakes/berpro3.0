@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 
 export default function Form() {
-  // Get data from the form.
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
   const [email, setEmail] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,6 +22,11 @@ export default function Form() {
         email: email,
       }),
     });
+    if (response.ok) {
+      setSuccessMessage("Email sent 🚀 - We will be in touch asap.");
+    } else {
+      setSuccessMessage("Error sending message ❌ - Please try again later.");
+    }
   }
   return (
     <div className='w-full text-[var(--body-color)]'>
@@ -85,6 +90,17 @@ export default function Form() {
               Submit
             </button>
           </div>
+          {successMessage && (
+            <p
+              className={`px-4 py-2 ${
+                successMessage === "Email sent 🚀 - We will be in touch asap."
+                  ? "bg-emerald-200"
+                  : "bg-rose-300"
+              }`}
+            >
+              {successMessage}
+            </p>
+          )}
           <p className='p4'>
             We respect your privacy and will never share your information
           </p>
