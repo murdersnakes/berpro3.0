@@ -1,8 +1,15 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-async function sendEmail(data) {
-  const { first, last, email } = data;
+interface DataType {
+  first: string;
+  last: string;
+  email: string;
+  date: string;
+}
+
+async function sendEmail(data): Promise<void> {
+  const { first, last, email, date } = data as DataType;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -16,7 +23,7 @@ async function sendEmail(data) {
     from: process.env.GMAIL_USER,
     to: "info@berpro.ie",
     subject: "New BERpro form submission",
-    text: `First name: ${first}\nLast name: ${last}\nEmail: ${email}`,
+    text: `First name: ${first}\nLast name: ${last}\nEmail: ${email}\nDate: ${date}`,
   };
 
   try {
@@ -27,11 +34,11 @@ async function sendEmail(data) {
   }
 }
 
-export async function POST(request: Request) {
+export async function POST(request: Request): Promise<Response> {
   const body = await request.json();
   console.log("body: ", body);
 
-  if (!body.first || !body.last || !body.email) {
+  if (!body.first || !body.last || !body.email || !body.date) {
     return new Response("data not found", { status: 400 });
   }
 
