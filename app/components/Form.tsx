@@ -5,7 +5,7 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaCheck, FaSpinner, FaTimes } from "react-icons/fa";
 import buildingPrice from "../../data/BasePrice";
-import basePrice from "../../data/BasePrice";
+import { bookedTimeSlots } from "./bookedTimeSlots";
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -44,6 +44,8 @@ export default function Form() {
         buildingType,
         numRooms,
         dateTime,
+        eircode,
+        price,
       }),
     });
 
@@ -67,24 +69,6 @@ export default function Form() {
       return <FaTimes />;
     }
   };
-
-  const bookedTimeSlots = [
-    {
-      date: new Date(new Date().getFullYear(), 6, 5), // July 5
-      isFullDay: true, // Full day for my birthday
-    },
-    {
-      date: new Date(new Date().getFullYear(), 4, 19), // May 19
-      isFullDay: true, // Full day
-    },
-    {
-      date: new Date(new Date().getFullYear(), 4, 10), // May 10
-      isFullDay: false, // Not full day, specific time slots are booked
-      time: [
-        new Date(new Date().getFullYear(), 4, 10, 11, 0), // Booked: 11 AM
-      ],
-    },
-  ];
 
   const isDateAvailable = (date) => {
     const today = new Date();
@@ -165,13 +149,14 @@ export default function Form() {
           method='POST'
           className='form w-full flex flex-col gap-2 p-7'
         >
-          <span className="h4 border-t-2 pt-2">Contact Details</span>
+          <span className='h4 border-t-2 pt-2'>Contact Details</span>
           <input
             placeholder='Name'
             required
             type='text'
             value={name}
             onChange={(e) => setName(e.target.value)}
+            autoComplete='name'
           />
           <input
             placeholder='Email'
@@ -179,6 +164,7 @@ export default function Form() {
             type='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            autoComplete='email'
           />
 
           <input
@@ -187,6 +173,7 @@ export default function Form() {
             type='tel'
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            autoComplete='tel'
           />
 
           <input
@@ -194,6 +181,7 @@ export default function Form() {
             type='text'
             value={eircode}
             onChange={(e) => setEircode(e.target.value)}
+            autoComplete='postal-code'
           />
 
           <button
@@ -236,7 +224,7 @@ export default function Form() {
             </>
           )}
 
-            <span className="h4 border-t-2 pt-2">Building Details</span>
+          <span className='h4 border-t-2 pt-2'>Building Details</span>
           <select
             required
             value={buildingType}
@@ -269,11 +257,12 @@ export default function Form() {
               setPrice(calculatePrice(buildingType, e.target.value));
             }}
           />
+          <span className='h4 border-t-2 pt-2'>Appointment Date</span>
           <ReactDatePicker
             selected={dateTime}
             onChange={(date) => setDateTime(date)}
             showTimeSelect
-            dateFormat='dd/MM/yyyy h:mm aa'
+            dateFormat='dd MMM yyyy (h aa)'
             timeIntervals={60}
             filterDate={isDateAvailable}
             filterTime={isTimeAvailable}
