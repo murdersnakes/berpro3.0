@@ -93,7 +93,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
 			lang="en"
 			className={`${headFont.variable} ${bodyFont.variable}`}
 		>
-			<body className="body overflow-x-hidden">
+			<body>
 				<Navbar />
 				<main>{children}</main>
 				<Footer />

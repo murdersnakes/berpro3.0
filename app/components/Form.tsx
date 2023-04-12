@@ -3,18 +3,33 @@
 import React, { useState, useEffect } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import supabase from '../../supabase/supabase';
+import { FaCheck, FaSpinner, FaTimes } from "react-icons/fa";
+import buildingPrice from "../../data/BasePrice";
+import basePrice from "../../data/BasePrice";
 
 export default function Form() {
-  const [first, setFirst] = useState("");
-  const [last, setLast] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState("");
+  const [phone, setPhone] = useState("");
+  const [eircode, setEircode] = useState("");
+  const [addressLine1, setAddressLine1] = useState("");
+  const [addressLine2, setAddressLine2] = useState("");
+  const [city, setCity] = useState("");
+  const [county, setCounty] = useState("");
+  const [buildingType, setBuildingType] = useState("");
+  const [numRooms, setNumRooms] = useState("");
+  const [dateTime, setDateTime] = useState(new Date());
   const [successMessage, setSuccessMessage] = useState("");
-  const [selectedDateTime, setSelectedDateTime] = useState(new Date());
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(null);
+  const [price, setPrice] = useState(0);
+  const [showAddressSection, setShowAddressSection] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setIsLoading(true);
+    setIsSuccess(null);
+    const address = `${addressLine1}, ${addressLine2}, ${city}, ${county}`;
 
     const response = await fetch("/api/form", {
       method: "POST",
@@ -22,158 +37,270 @@ export default function Form() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        first: first,
-        last: last,
-        email: email,
-        date: date,
+        name,
+        email,
+        phone,
+        address,
+        buildingType,
+        numRooms,
+        dateTime,
       }),
     });
+
     if (response.ok) {
+      setIsLoading(false);
+      setIsSuccess(true);
       setSuccessMessage("Email sent 🚀 - We will be in touch asap.");
-      addBooking(date); // Add the booking to the Supabase table
     } else {
+      setIsLoading(false);
+      setIsSuccess(false);
       setSuccessMessage("Error sending message ❌ - Please try again later.");
     }
   }
 
-  const [disabledDateTimeSlots, setDisabledDateTimeSlots] = useState([]);
-
-  async function fetchDisabledTimeSlots() {
-    const { data, error } = await supabase.from("bookings").select("dateTime");
-    if (error) {
-      console.error("Error fetching disabled time slots:", error);
-    } else {
-      setDisabledDateTimeSlots(data.map((row) => row.dateTime));
+  const renderButtonIcon = () => {
+    if (isLoading) {
+      return <FaSpinner className='animate-spin' />;
+    } else if (isSuccess === true) {
+      return <FaCheck />;
+    } else if (isSuccess === false) {
+      return <FaTimes />;
     }
-  }
+  };
 
-  useEffect(() => {
-    fetchDisabledTimeSlots();
-  }, []);
+  const bookedTimeSlots = [
+    {
+      date: new Date(new Date().getFullYear(), 6, 5), // July 5
+      isFullDay: true, // Full day for my birthday
+    },
+    {
+      date: new Date(new Date().getFullYear(), 4, 19), // May 19
+      isFullDay: true, // Full day
+    },
+    {
+      date: new Date(new Date().getFullYear(), 4, 10), // May 10
+      isFullDay: false, // Not full day, specific time slots are booked
+      time: [
+        new Date(new Date().getFullYear(), 4, 10, 11, 0), // Booked: 11 AM
+      ],
+    },
+  ];
 
-  async function addBooking(dateTime) {
-    const { error } = await supabase.from("bookings").insert([{ dateTime }]);
-    if (error) {
-      console.error("Error adding booking:", error);
-    } else {
-      // Update the disabled time slots
-      fetchDisabledTimeSlots();
+  const isDateAvailable = (date) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Disallow Sundays and days before today
+    if (date.getDay() === 0 || date < today) {
+      return false;
     }
-  }
 
-  const getDisabledTimes = (selectedDate) => {
-    // Replace this array with the disabled time slots from your CMS or database.
-    const disabledDateTimeSlots = [
-      "2023-04-27T17:00:00.000Z",
-      // Add more disabled time slots here.
-    ];
+    const bookedSlot = bookedTimeSlots.find(
+      (slot) => slot.date.toDateString() === date.toDateString()
+    );
 
-    const selectedDateISOString = selectedDate.toISOString().slice(0, 10);
-    const disabledTimesForSelectedDate = disabledDateTimeSlots
-      .filter((slot) => slot.slice(0, 10) === selectedDateISOString)
-      .map((slot) => new Date(slot));
+    // If the whole day is booked, exclude that date
+    if (bookedSlot && bookedSlot.isFullDay) {
+      return false;
+    }
 
-    return disabledTimesForSelectedDate;
+    // If the date is not in the bookedTimeSlots array or if it's not a full-day booking, the date is available
+    return true;
+  };
+
+  const isTimeAvailable = (date) => {
+    const bookedSlot = bookedTimeSlots.find(
+      (slot) => slot.date.toDateString() === date.toDateString()
+    );
+
+    // If the whole day is booked, exclude all times for that day
+    if (bookedSlot && bookedSlot.isFullDay) {
+      return false;
+    }
+
+    // If specific time slots are booked, exclude those times
+    if (bookedSlot) {
+      return !bookedSlot.time.some(
+        (time) =>
+          time.getHours() === date.getHours() &&
+          time.getMinutes() === date.getMinutes()
+      );
+    }
+
+    // If the date is not in the bookedTimeSlots array, all times are available
+    return true;
+  };
+
+  const getMinTime = (date) => {
+    const now = new Date();
+    if (
+      date.getDate() === now.getDate() &&
+      date.getMonth() === now.getMonth() &&
+      date.getFullYear() === now.getFullYear()
+    ) {
+      return new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        now.getHours(),
+        now.getMinutes()
+      );
+    } else {
+      return new Date(0, 0, 0, 8, 0); // 8 AM
+    }
+  };
+
+  const calculatePrice = (buildingType, numRooms) => {
+    const basePrice = buildingPrice;
+    const roomPrice = 40;
+    return basePrice[buildingType] + numRooms * roomPrice;
   };
 
   return (
     <div className='w-full text-[var(--body-color)]'>
-      <div className='bg-neutral-100 rounded shadow-2xl p-7 sm:p-10'>
-        <h2 className='mb-4  sm:text-center sm:mb-6 h3'>Book an appointment</h2>
-        <form onSubmit={handleSubmit} method='POST'>
-          <div className='mb-1 sm:mb-2 flex items-center justify-between'>
-            <label htmlFor='first' className='inline-block mb-1 p2'>
-              First name
-            </label>
-            <input
-              placeholder='Joe'
-              aria-label='First name'
-              required
-              type='text'
-              id='first'
-              name='first'
-              value={first}
-              onChange={(e) => setFirst(e.target.value)}
-            />
-          </div>
-          <div className='mb-1 sm:mb-2 flex items-center justify-between'>
-            <label htmlFor='last' className='inline-block mb-1 p2 '>
-              Last name
-            </label>
-            <input
-              placeholder='Bloggs'
-              aria-label='Last name'
-              required
-              type='text'
-              id='last'
-              name='last'
-              value={last}
-              onChange={(e) => setLast(e.target.value)}
-            />
-          </div>
-          <div className='w-full mb-1 sm:mb-2 flex items-center justify-between'>
-            <label htmlFor='email' className='inline-block mb-1 p2'>
-              E-mail
-            </label>
-            <input
-              placeholder='joe.bloggs@example.ie'
-              aria-label='E-mail'
-              required
-              type='text'
-              id='email'
-              name='email'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className='mb-1 sm:mb-2 flex items-center justify-between'>
-            <label htmlFor='email' className='inline-block mb-1 p2'>
-              Choose a date and time
-            </label>
-            <ReactDatePicker
-              className=' w-fit ml-auto flex justify-end'
-              selected={selectedDateTime}
-              onChange={(date) => {
-                setSelectedDateTime(date);
-                setDate(date); // Update the date state variable
-              }}
-              dateFormat='dd MMM (h aa)'
-              showTimeSelect
-              timeFormat='h:mm aa'
-              timeIntervals={60}
-              filterDate={(date) => {
-                const today = new Date();
-                today.setHours(0, 0, 0, 0);
-                const day = date.getDay();
-                return (
-                  day !== 0 && // Exclude Sundays
-                  date >= today // Exclude dates before today
-                );
-              }}
-              filterTime={(time) => {
-                const hour = time.getUTCHours();
-                const day = time.getUTCDay();
-                const isOutsideWorkingHours =
-                  hour < 8 || hour >= 20 || day === 0;
+      <div className='bg-neutral-100 rounded shadow-2xl '>
+        <h2 className='text-center sm:mb-3 h3 pt-6'>Book an appointment</h2>
+        <form
+          onSubmit={handleSubmit}
+          method='POST'
+          className='form w-full flex flex-col gap-2 p-7'
+        >
+          <span className="h4 border-t-2 pt-2">Contact Details</span>
+          <input
+            placeholder='Name'
+            required
+            type='text'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            placeholder='Email'
+            required
+            type='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-                return !isOutsideWorkingHours;
-              }}
-              excludeTimes={getDisabledTimes(selectedDateTime)}
-            />
-          </div>
+          <input
+            placeholder='Phone'
+            required
+            type='tel'
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
 
-          <div className='mt-4 mb-2 sm:mb-4'>
-            <button
-              type='submit'
-              aria-label='Submit'
-              className='inline-flex items-center justify-center w-full h-12 px-6 p1 tracking-wide text-white transition duration-200 rounded shadow-md bg-[var(--primary-color)] hover:bg-[var(--primary-color-hover)] focus:shadow-outline focus:outline-none'
-            >
-              Submit
-            </button>
-          </div>
+          <input
+            placeholder='Eircode'
+            type='text'
+            value={eircode}
+            onChange={(e) => setEircode(e.target.value)}
+          />
+
+          <button
+            type='button'
+            onClick={() => setShowAddressSection(!showAddressSection)}
+            className='underline text-[var(--primary-color)] text-left ml-3 p4'
+          >
+            Don&apos;t have an eircode?
+          </button>
+
+          {showAddressSection && (
+            <>
+              <input
+                placeholder='Address Line 1'
+                required
+                type='text'
+                value={addressLine1}
+                onChange={(e) => setAddressLine1(e.target.value)}
+              />
+              <input
+                placeholder='Address Line 2'
+                type='text'
+                value={addressLine2}
+                onChange={(e) => setAddressLine2(e.target.value)}
+              />
+              <input
+                placeholder='City'
+                required
+                type='text'
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+              />
+              <input
+                placeholder='County'
+                required
+                type='text'
+                value={county}
+                onChange={(e) => setCounty(e.target.value)}
+              />
+            </>
+          )}
+
+            <span className="h4 border-t-2 pt-2">Building Details</span>
+          <select
+            required
+            value={buildingType}
+            onChange={(e) => {
+              setBuildingType(e.target.value);
+              setPrice(calculatePrice(e.target.value, numRooms));
+            }}
+          >
+            <option value=''>Select Building Type</option>
+            <option value='apartment'>Apartment</option>
+            <option value='bungalow'>Bungalow</option>
+            <option value='cottage'>Cottage</option>
+            <option value='detached'>Detached House</option>
+            <option value='dormer'>Dormer Bungalow</option>
+            <option value='duplex'>Duplex</option>
+            <option value='endTerrace'>End of Terrace House</option>
+            <option value='semiDetached'>Semi-Detached House</option>
+            <option value='terraced'>Terraced House</option>
+            <option value='townhouse'>Townhouse</option>
+          </select>
+          <input
+            placeholder='Number of rooms'
+            required
+            type='number'
+            min='1'
+            max='9'
+            value={numRooms}
+            onChange={(e) => {
+              setNumRooms(e.target.value);
+              setPrice(calculatePrice(buildingType, e.target.value));
+            }}
+          />
+          <ReactDatePicker
+            selected={dateTime}
+            onChange={(date) => setDateTime(date)}
+            showTimeSelect
+            dateFormat='dd/MM/yyyy h:mm aa'
+            timeIntervals={60}
+            filterDate={isDateAvailable}
+            filterTime={isTimeAvailable}
+            minDate={new Date()} // Set the minimum date to today
+            minTime={getMinTime(dateTime)} // Set the minimum time based on the selected date
+            maxTime={new Date(0, 0, 0, 20, 0)} // Set maximum time to 8 PM
+            placeholderText='Select a date and time'
+          />
+
+          {buildingType && numRooms && (
+            <div className='flex items-center p1 gap-2'>
+              <h4 className='font-bold'>Quote</h4>
+              <p>€{price}</p>
+            </div>
+          )}
+
+          <button
+            type='submit'
+            className='mt-3 flex justify-between items-center bg-[var(--primary-color)] py-3 px-5 h4 text-white rounded hover-shadow hover:bg-[var(--primary-color-hover)] transition-colors'
+            disabled={isLoading}
+          >
+            Submit
+            {renderButtonIcon()}
+          </button>
           {successMessage && (
             <p
-              className={`px-4 py-2 mb-2 ${
+              className={`px-4 py-2 mb-2 rounded shadow ${
                 successMessage === "Email sent 🚀 - We will be in touch asap."
                   ? "bg-emerald-200"
                   : "bg-rose-300"

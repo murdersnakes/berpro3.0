@@ -2,14 +2,17 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 interface DataType {
-  first: string;
-  last: string;
+  name: string;
   email: string;
-  date: string;
+  phone: string;
+  buildingType: string;
+  dateTime: string;
+  numRooms: number;
 }
 
 async function sendEmail(data): Promise<void> {
-  const { first, last, email, date } = data as DataType;
+  const { name, email, phone, buildingType, numRooms, dateTime } =
+    data as DataType;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -23,7 +26,7 @@ async function sendEmail(data): Promise<void> {
     from: process.env.GMAIL_USER,
     to: "info@berpro.ie",
     subject: "New BERpro form submission",
-    text: `First name: ${first}\nLast name: ${last}\nEmail: ${email}\nDate: ${date}`,
+    text: `name: ${name}\nemail: ${email}\nPhone: ${phone}\nBuilding Type:${buildingType}\nNumber of Rooms:${numRooms}\nDate & Time: ${dateTime}`,
   };
 
   try {
@@ -38,12 +41,18 @@ export async function POST(request: Request): Promise<Response> {
   const body = await request.json();
   console.log("body: ", body);
 
-  if (!body.first || !body.last || !body.email || !body.date) {
+  if (
+    !body.name ||
+    !body.email ||
+    !body.phone ||
+    !body.buildingType ||
+    !body.numRooms ||
+    !body.dateTime
+  ) {
     return new Response("data not found", { status: 400 });
   }
 
   await sendEmail(body);
 
-  const fullName = `${body.first} ${body.last}`;
-  return NextResponse.json({ data: fullName });
+  return NextResponse.json({ data: body.name });
 }
