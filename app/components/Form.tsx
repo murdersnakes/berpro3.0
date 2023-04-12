@@ -270,6 +270,7 @@ export default function Form() {
             minTime={getMinTime(dateTime)} // Set the minimum time based on the selected date
             maxTime={new Date(0, 0, 0, 20, 0)} // Set maximum time to 8 PM
             placeholderText='Select a date and time'
+            withPortal
           />
 
           {buildingType && numRooms && (
