@@ -16,7 +16,7 @@ export default function FamiliarScale() {
 						the BER scale rates homes from A to G, where:
 					</p>
 				</div>
-				<div className="p-10 border border-[var(--body-color)] rounded-xl bg-neutral-200 grid gap-8 row-gap-12 lg:grid-cols-2">
+				<div className="p-10 border-2 border-black border-[var(--body-color)] rounded-lg bg-gray-100 grid gap-8 row-gap-12 lg:grid-cols-2">
 					<div className="max-w-md sm:mx-auto sm:text-center">
 						<div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full sm:mx-auto sm:w-24 sm:h-24">
 							<Image

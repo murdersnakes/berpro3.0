@@ -10,7 +10,7 @@ import { TbRecycle } from 'react-icons/tb';
 
 export default function FactorsEffectingBer() {
 	return (
-		<div className="bg-[var(--text-color)] text-[var(--body-color)] ">
+		<div className="bg-[var(--text-color-hover)] text-[var(--body-color)] ">
 			<div className="cont py-24">
 				<div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
 					<h4 className="max-w-lg mb-4 h2 md:mx-auto">
@@ -21,7 +21,7 @@ export default function FactorsEffectingBer() {
 						including:
 					</p>
 				</div>
-				<div className="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x lg:divide-indigo-500">
+				<div className="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x lg:divide-indigo-300">
 					<div className="space-y-6 sm:px-16">
 						<div className="flex flex-col max-w-md sm:flex-row">
 							<div className="mb-4 mr-4">

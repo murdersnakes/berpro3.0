@@ -8,8 +8,8 @@ export default function page({ params }) {
 	const post = data.find((post): boolean => post.slug === params.slug);
 
 	return (
-		<div className="bg-[var(--body-color)] text-[var(--text-color)]">
-			<div className="cont py-24 prose prose-invert">
+		<div className="bg-[var(--text-color)] text-[var(--body-color)]">
+			<div className="cont py-24 prose ">
 				<h1 className="h2">{post.title}</h1>
 				<p className="p3 uppercase mt-3">
 					{post.date} | {post.author}
@@ -22,7 +22,7 @@ export default function page({ params }) {
 					alt={post.title}
 				/>
 				<div
-					className="prose prose-h1:h2 prose-invert"
+					className="prose prose-h1:h2 "
 					dangerouslySetInnerHTML={{ __html: post.content }}
 				></div>
 			</div>

@@ -4,7 +4,7 @@ import { IoIosPaper, IoIosCheckmark, IoIosHome } from 'react-icons/io';
 
 export default function Prepare() {
 	return (
-		<div className='text-[var(--text-color)] bg-[var(--body-color)]'>
+		<div className='text-[var(--text-color)] bg-neutral-700'>
 			<div className='cont py-24'>
 				<div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-24'>
 					<div>
@@ -35,7 +35,7 @@ export default function Prepare() {
 				<div className='grid max-w-md gap-8 row-gap-10 sm:mx-auto lg:max-w-full lg:grid-cols-2'>
 					<div className='flex flex-col sm:flex-row'>
 						<div className='sm:mr-4'>
-							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full text-indigo-300 bg-[var(--body-color-hover)] text-2xl'>
+							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full text-indigo-300 bg-transparent text-2xl'>
 								<IoIosPaper />
 							</div>
 						</div>
@@ -92,7 +92,7 @@ export default function Prepare() {
 					</div>
 					<div className='flex flex-col sm:flex-row'>
 						<div className='sm:mr-4'>
-							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full text-indigo-300 bg-[var(--body-color-hover)] text-2xl'>
+							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full text-indigo-300 bg-bg-transparent  text-2xl'>
 								<IoIosHome />
 							</div>
 						</div>

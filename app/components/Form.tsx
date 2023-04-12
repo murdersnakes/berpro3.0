@@ -141,13 +141,22 @@ export default function Form() {
   };
 
   return (
-    <div className='w-full text-[var(--body-color)]'>
-      <div className='bg-neutral-100 rounded shadow-2xl '>
-        <h2 className='text-center sm:mb-3 h3 pt-6'>Book an appointment</h2>
+    <div className='w-full text-[var(--body-color)] border-2 border-black bg-neutral-100 rounded shadow-lg'>
+     
+        <h2 className='text-center h3 pt-6'>Book an appointment</h2>
+        <p className='h4 text-base text-center text-emerald-600'>
+          *Fill in building details for Quote*
+        </p>
+        {buildingType && numRooms && (
+          <div className='flex items-center justify-center p1 gap-2 bg-emerald-600 text-white'>
+            <h4 className='font-bold'>Quote</h4>
+            <p>€{price}</p>
+          </div>
+        )}
         <form
           onSubmit={handleSubmit}
           method='POST'
-          className='form w-full flex flex-col gap-2 p-7'
+          className='form w-full flex flex-col gap-2 pb-7 px-7'
         >
           <span className='h4 border-t-2 pt-2'>Contact Details</span>
           <input
@@ -273,13 +282,6 @@ export default function Form() {
             withPortal
           />
 
-          {buildingType && numRooms && (
-            <div className='flex items-center p1 gap-2'>
-              <h4 className='font-bold'>Quote</h4>
-              <p>€{price}</p>
-            </div>
-          )}
-
           <button
             type='submit'
             className='mt-3 flex justify-between items-center bg-[var(--primary-color)] py-3 px-5 h4 text-white rounded hover-shadow hover:bg-[var(--primary-color-hover)] transition-colors'
@@ -303,7 +305,7 @@ export default function Form() {
             We respect your privacy and will never share your information
           </p>
         </form>
-      </div>
+   
     </div>
   );
 }

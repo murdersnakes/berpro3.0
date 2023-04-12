@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import {
@@ -10,6 +11,7 @@ import {
   FaTimes,
   FaSortAmountUpAlt,
 } from "react-icons/fa";
+import logo from "../../public/logo_white.svg";
 
 const navlinks = [
   {
@@ -58,15 +60,18 @@ export default function Navbar() {
 
   return (
     <div className='relative bg-[var(--body-color)] bg-opacity-90'>
-      <div className='cont flex justify-between py-2'>
+      <div className='cont flex justify-between items-center py-2'>
         <Link
           href='/'
           aria-label='Berpro, Back to homepage'
           title='Berpro, Back to homepage'
-          className='h3 font-black uppercase flex items-center'
+          className=''
         >
-          <FaHome />
-          BER<span className='lowercase italic font-light'>pro</span>
+          <Image
+            src={logo}
+            alt='BERpro Logo'
+            className='w-36 object-contain object-center'
+          />
         </Link>
         <button
           onClick={handleMenu}
@@ -78,11 +83,11 @@ export default function Navbar() {
         </button>
         <ul
           ref={menuRef}
-          className={`absolute top-full right-0 w-1/2 py-12 rounded-bl-lg shadow-xl md:shadow-none space-y-3 md:space-y-0 md:py-1 md:relative md:min-h-fit md:w-auto md:translate-x-0 bg-[var(--body-color)] text-[var(--text-color)] z-40 transition-all duration-500 ${
+          className={`absolute top-full right-0 w-full max-w-md py-12 rounded-bl-lg shadow-xl md:shadow-none space-y-3 md:space-y-0 md:py-1 md:relative md:min-h-fit md:w-auto md:translate-x-0 bg-[var(--body-color)] text-[var(--text-color)] z-40 transition-all duration-500 ${
             isOpen
-              ? "translate-x-0 opacity-100 scale-100"
-              : "translate-x-full opacity-0 scale-95"
-          } md:translate-x-0 md:opacity-100 md:scale-100 md:flex`}
+              ? "translate-y-0 opacity-100 scale-100"
+              : "translate-y-1/2 opacity-0 scale-95"
+          } md:translate-y-0 md:opacity-100 md:scale-100 md:flex`}
         >
           {navlinks.map((link) => {
             return (
@@ -91,10 +96,9 @@ export default function Navbar() {
                   href={link.link}
                   aria-label={link.name}
                   title={link.name}
-                  className='flex px-4 py-3 items-center gap-1 rounded hover:bg-[var(--body-color-hover)] '
+                  className='flex px-4 py-2 items-center gap-1 font-head rounded hover:bg-[var(--text-color)] border-2 border-transparent hover:border-black hover:text-black transition-all'
                   onClick={() => setIsOpen(false)}
                 >
-                  {link.icon}
                   {link.name}
                 </Link>
               </li>
