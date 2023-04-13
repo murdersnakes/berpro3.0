@@ -15,10 +15,11 @@ export default function page() {
 			<FamiliarScale />
 			<CalcVsMeasured />
 			<CalculatingBer />
+			<CTA />
 			<FactorsEffectingBer />
 			<Prepare />
 			<Optimise />
-			<CTA />
+		
 		</>
 	);
 }

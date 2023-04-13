@@ -7,7 +7,7 @@ import image2 from '../../public/compare.svg';
 export default function CalculatingBer() {
 	return (
 		<div className='text-[var(--body-color)] bg-[var(--text-color)]'>
-			<div className='relative py-24'>
+			<div className='relative pt-24 pb-12'>
 				<div className='relative cont  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center '>
 					<Image
 						src={image1}
@@ -36,7 +36,7 @@ export default function CalculatingBer() {
 				</div>
 			</div>
 
-			<div className='relative py-24'>
+			<div className='relative pb-24 pt-12'>
 				<div className='cont grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 					<div className='text-center lg:text-left row-start-2 lg:row-start-1'>
 						<h4 className='h2'>On a like-for-like basis</h4>

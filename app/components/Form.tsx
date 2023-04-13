@@ -5,8 +5,8 @@ import React, { useState, useEffect } from "react";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaCheck, FaSpinner, FaTimes } from "react-icons/fa";
-import buildingPrice from "../../data/BasePrice";
-import { bookedTimeSlots } from "./bookedTimeSlots";
+// import buildingPrice from "../../data/BasePrice";
+// import { bookedTimeSlots } from "./bookedTimeSlots";
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -327,8 +327,11 @@ export default function Form() {
         )}
         <p className='p3'>
           We respect your privacy and will never share your information. Please
-          see our <Link className="link" href='/privacy-policy'>Privacy Policy</Link> for more
-          information.
+          see our{" "}
+          <Link className='link' href='/privacy-policy'>
+            Privacy Policy
+          </Link>{" "}
+          for more information.
         </p>
       </form>
     </div>

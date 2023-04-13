@@ -5,7 +5,9 @@ export default function page() {
   return (
     <div className='bg-[var(--text-color)]'>
       <div className='cont py-24'>
-        <Form />
+        <div>
+            <Form />
+        </div>
       </div>
     </div>
   );

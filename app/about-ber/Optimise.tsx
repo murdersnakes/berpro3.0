@@ -21,11 +21,9 @@ export default function Optimise() {
 							efficiency:
 						</p>
 					</div>
-					<div className='grid gap-5 row-gap-5 sm:grid-cols-2'>
+					<div className='grid gap-10 sm:grid-cols-2'>
 						<div className='max-w-md'>
-							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-800 text-[var(--text-color)] text-2xl'>
-								<CgTemplate />
-							</div>
+							
 							<h6 className='h4'>Insulation</h6>
 							<p className='p3'>
 								Properly insulating your home&apos;s walls, roof, and floor can
@@ -36,9 +34,7 @@ export default function Optimise() {
 							</p>
 						</div>
 						<div className='max-w-md'>
-							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-800 text-[var(--text-color)] text-2xl'>
-								<TbDoor />
-							</div>
+							
 							<h6 className='h4'>Windows and Doors</h6>
 							<p className='p3'>
 								Upgrading to double or triple-glazed windows and sealing doors
@@ -48,9 +44,7 @@ export default function Optimise() {
 							</p>
 						</div>
 						<div className='max-w-md'>
-							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-800 text-[var(--text-color)] text-2xl'>
-								<AiFillControl />
-							</div>
+							
 							<h6 className='h4'>Heating Systems and Controls</h6>
 							<p className='p3'>
 								Replacing older, inefficient boilers with modern condensing
@@ -60,9 +54,7 @@ export default function Optimise() {
 							</p>
 						</div>
 						<div className='max-w-md'>
-							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-800 text-[var(--text-color)] text-2xl'>
-								<HiLightBulb />
-							</div>
+							
 							<h6 className='h4'>Lighting</h6>
 							<p className='p3'>
 								Utilising energy-efficient light bulbs in fixed lighting
@@ -72,9 +64,7 @@ export default function Optimise() {
 							</p>
 						</div>
 						<div className='max-w-md'>
-							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-800 text-[var(--text-color)] text-2xl'>
-								<MdSolarPower />
-							</div>
+							
 							<h6 className='h4'>Renewable Energy Systems</h6>
 							<p className='p3'>
 								Installing renewable energy systems, such as photovoltaics (PV),
@@ -85,9 +75,7 @@ export default function Optimise() {
 							</p>
 						</div>
 						<div className='max-w-md'>
-							<div className='flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-800 text-[var(--text-color)] text-2xl'>
-								<FaToolbox />
-							</div>
+						
 							<h6 className='h4'>Regular Maintenance</h6>
 							<p className='p3'>
 								Regularly maintaining your heating system, insulation, and other

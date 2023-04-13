@@ -72,12 +72,12 @@ export async function POST(request: Request): Promise<Response> {
     !body.name ||
     !body.email ||
     !body.phone ||
-    !body.buildingType ||
-    !body.numRooms ||
+    // !body.buildingType ||
+    // !body.numRooms ||
     !body.dateTime ||
     !body.eircode ||
-    !body.address ||
-    !body.price
+    !body.address
+    // !body.price
   ) {
     return new Response("data not found", { status: 400 });
   }

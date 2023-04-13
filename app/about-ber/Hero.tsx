@@ -16,7 +16,7 @@ export default function Hero() {
 								</h1>
 							</div>
 							<h2 className="h1 mb-6">
-								<h2>Understanding the Rating Scale</h2>
+								Understanding the Rating Scale
 							</h2>
 
 							<p>

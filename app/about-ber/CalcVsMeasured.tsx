@@ -15,7 +15,7 @@ export default function CalcVsMeasured() {
             consumption) rating.
           </p>
         </div>
-        <div className='flex flex-col border-2 border-black bg-gray-100 rounded-lg shadow-sm md:justify-center lg:flex-row'>
+        <div className='flex flex-col border border-black bg-neutral-200 rounded-lg shadow-sm md:justify-center lg:flex-row'>
           <div className='flex flex-col justify-between border-b p-10 sm:p-16 lg:border-b-0 lg:border-r-2-black lg:w-1/2'>
             <div>
               <h4 className='max-w-md mb-6 h2'>
@@ -24,7 +24,7 @@ export default function CalcVsMeasured() {
               <p className='mt-6 mb-2 p3 font-semibold tracking-wide text-indigo-700'>
                 Key features include:
               </p>
-              <ul className='prose list-disc prose-li:marker:text-gray-600'>
+              <ul className='prose list-disc prose-li:marker:text-neutral-600'>
                 <li>
                   Energy usage calculated based on the dwelling, not the number
                   of occupants
@@ -42,7 +42,7 @@ export default function CalcVsMeasured() {
               <p className='mt-6 mb-2 p3 font-semibold tracking-wide text-indigo-700'>
                 However, there are some drawbacks:
               </p>
-              <ul className='prose list-disc prose-li:marker:text-gray-600'>
+              <ul className='prose list-disc prose-li:marker:text-neutral-600'>
                 <li>
                   Energy bills may differ from the asset rating depending on the
                   occupant&apos;s energy usage habits
@@ -61,7 +61,7 @@ export default function CalcVsMeasured() {
               <p className='mt-6 mb-2 p3 font-semibold tracking-wide text-indigo-700'>
                 Key features include:
               </p>
-              <ul className='prose list-disc prose-li:marker:text-gray-600'>
+              <ul className='prose list-disc prose-li:marker:text-neutral-600'>
                 <li>
                   Actual energy usage measured based on bills or monitored data
                 </li>
@@ -73,7 +73,7 @@ export default function CalcVsMeasured() {
               <p className='mt-6 mb-2 p3 font-semibold tracking-wide text-indigo-700'>
                 Advantages include:
               </p>
-              <ul className='prose list-disc prose-li:marker:text-gray-600'>
+              <ul className='prose list-disc prose-li:marker:text-neutral-600'>
                 <li>
                   Reflects actual energy usage and does not require a detailed
                   survey of dwelling fabric and heating system
@@ -82,7 +82,7 @@ export default function CalcVsMeasured() {
               <p className='mt-6 mb-2 p3 font-semibold tracking-wide text-indigo-700'>
                 Disadvantages include:
               </p>
-              <ul className='prose list-disc prose-li:marker:text-gray-600'>
+              <ul className='prose list-disc prose-li:marker:text-neutral-600'>
                 <li>
                   Difficulty comparing properties on a like-for-like basis for
                   prospective buyers or tenants
