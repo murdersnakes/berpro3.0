@@ -24,10 +24,6 @@ body {
   background-size: cover;
 }
 
-.embla__slide {
-  flex: 0 0 50%;
-  min-width: 0;
-}
 
 @media screen and (max-width: 768px) {
   .embla__slide {
@@ -36,9 +32,7 @@ body {
 }
 
 @layer base{
-  .body{
-    @apply bg-[var(--body-color)] text-[var(--text-color)]
-  }
+
   .cont{
     @apply max-w-7xl px-5 mx-auto
   }

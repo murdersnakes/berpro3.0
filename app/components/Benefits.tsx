@@ -3,18 +3,18 @@ import { FaBolt, FaCheck, FaFile, FaMoneyBill } from "react-icons/fa";
 
 export default function Benefits() {
   return (
-    <div className='bg-gray-300 text-[var(--body-color)]'>
-      <div className='cont pb-24'>
+    <div className='bg-neutral-300 text-[var(--body-color)]'>
+      <div className='cont py-24'>
         <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
           <div>
-            <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-indigo-800 uppercase rounded-full bg-teal-accent-400'>
+            <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-indigo-700'>
               Why Choose Us?
             </p>
           </div>
           <h4 className='max-w-lg mb-6 h2 md:mx-auto'>
             Benefits of Choosing BERpro for Your Energy Assessments
           </h4>
-          <p className='text-base text-gray-700 md:text-lg'>
+          <p className='text-base text-neutral-700 md:text-lg'>
             BERpro offers fast, easy, accurate, and budget-friendly assessments
             for a Building Energy Rating (BER) certificate, enabling you to sell
             or rent your home and access SEAI grants for retrofitting.

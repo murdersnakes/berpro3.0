@@ -1,18 +1,21 @@
 import React from "react";
 import Benefits from "./components/Benefits";
+import Blog from "./components/Blog";
 import CTA from "./components/CTA";
 import Hero from "./components/Hero";
-import Pain from "./components/Pain";
+
 import Testimonials from "./components/Testimonials";
+import WhatIsBer from "./components/WhatIsBer";
 
 export default function page() {
   return (
     <div>
       <Hero />
-      <Pain />
+      <WhatIsBer />
       <CTA />
-      <Testimonials Autoplay={undefined} />
       <Benefits />
+      <Testimonials Autoplay={undefined} />
+      <Blog />
     </div>
   );
 }
