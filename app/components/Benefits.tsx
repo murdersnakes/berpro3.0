@@ -4,7 +4,7 @@ import { FaBolt, FaCheck, FaFile, FaMoneyBill } from "react-icons/fa";
 export default function Benefits() {
   return (
     <div className='bg-gray-300 text-[var(--body-color)]'>
-      <div className='cont py-24'>
+      <div className='cont pb-24'>
         <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
           <div>
             <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-indigo-800 uppercase rounded-full bg-teal-accent-400'>

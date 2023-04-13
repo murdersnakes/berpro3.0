@@ -1,34 +1,150 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
-import React from "react";
-import hero from "../../public/hero.webp";
-import seaiLogo from "../../public/seai_logo.svg";
-import { FaChevronRight } from "react-icons/fa";
-import Form from "./Form";
+import React, { useState } from "react";
+import { FaSpinner, FaCheck, FaTimes } from "react-icons/fa";
+
+import Confetti from "react-confetti";
 
 export default function Hero() {
+  const [email, setEmail] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(null);
+  const [numberOfPieces, setNumberOfPieces] = useState(0);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(email);
+    setIsLoading(true);
+    setIsSuccess(null);
+
+    const response = await fetch("/api/quote", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+      }),
+    });
+
+    if (response.ok) {
+      setIsLoading(false);
+      setIsSuccess(true);
+      setSuccessMessage("Email sent 🚀 - We will be in touch asap.");
+      setNumberOfPieces(200);
+      setTimeout(() => {
+        setNumberOfPieces(0);
+      }, 3000);
+    } else {
+      setIsLoading(false);
+      setIsSuccess(false);
+      setSuccessMessage("Error sending message ❌ - Please try again later.");
+    }
+  };
+
+  const renderButtonIcon = () => {
+    if (isLoading) {
+      return <FaSpinner className='animate-spin' />;
+    } else if (isSuccess === true) {
+      return <FaCheck />;
+    } else if (isSuccess === false) {
+      return <FaTimes />;
+    }
+  };
+
+  const renderConfetti = () => {
+    if (isSuccess === true) {
+      return (
+        <Confetti
+          colors={[
+            "#6ee7b7",
+            "#34d399",
+            "#059669",
+            "#065f46",
+            "#a5b4fc",
+            "#6366f1",
+            "#4338ca",
+          ]}
+          height={800}
+          numberOfPieces={numberOfPieces}
+          gravity={0.1}
+          initialVelocityY={20}
+        />
+      );
+    }
+  };
+
   return (
-    <div>
-      <div className='overflow-hidden bg-[var(--text-color)] text-[var(--body-color)]'>
-        <div className='cont py-12'>
-          <div className='flex flex-col items-center justify-between xl:flex-row'>
-            <div className='w-full max-w-xl mb-12 xl:pr-16 xl:mb-0 xl:w-7/12'>
-              <h2 className='max-w-lg mb-6 h1'>
-                Get a <span className='text-emerald-600'>BER Certificate </span>
-                <span>Fast</span>{" "}in
-                Meath, Louth &amp; Dublin
-              </h2>
-              <p className='max-w-xl mb-4 p1 text-gray-800 '>
-                Need a Building Energy Rating (BER) certificate for selling or
-                renting your home? Looking for SEAI grants to upgrade your
-                energy systems? BERpro has got you covered.
+    <div className='-z-50'>
+      {renderConfetti()}
+      <div className='relative bg-[var(--body-color)]'>
+        <div className='absolute inset-x-0 bottom-0'>
+          <svg
+            viewBox='0 0 224 12'
+            fill='currentColor'
+            className='w-full -mb-1 text-neutral-300 -z-40'
+            preserveAspectRatio='none'
+          >
+            <path d='M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z' />
+          </svg>
+        </div>
+        <div className='cont py-36'>
+          <div className='relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center'>
+            <h1 className=' mb-6 h1'>
+              Get a <span className='text-emerald-400'>BER Cert</span>
+              <span className='inline-block text-deep-purple-accent-400'>
+                in Meath, Louth and Dublin
+              </span>
+            </h1>
+            <p className='mb-6 text-base text-neutral-100 md:text-lg'>
+              Need a Building Energy Rating (BER) certificate for selling or
+              renting your home? Looking for SEAI grants to upgrade your energy
+              systems? BERpro has got you covered.
+            </p>
+            <form
+              onSubmit={handleSubmit}
+              className='flex flex-col items-center w-full mb-4 md:flex-row md:px-16'
+            >
+              <input
+                autoComplete='email'
+                placeholder='Email'
+                required
+                type='email'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className='flex-grow w-full h-12 px-4 mb-3 text-white transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline'
+              />
+              <button
+                type='submit'
+                className='gap-2 inline-flex whitespace-nowrap items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto hover:text-deep-purple-900 bg-emerald-600 hover:bg-emerald-700 focus:shadow-outline focus:outline-none'
+              >
+                Get a Quote
+                {renderButtonIcon()}
+              </button>
+            </form>
+            <div className='relative'>
+              <p className='max-w-md pb-3 mb-10 text-xs tracking-wide neutral-100 sm:text-sm sm:mx-auto md:mb-16'>
+                We respect your privacy and will never share your information.
+                Please see our{" "}
+                <Link className='link' href='/privacy-policy'>
+                  Privacy Policy
+                </Link>{" "}
+                for more information.
               </p>
-			  <Link href="/about-ber" className="group flex items-center gap-2 link h4 hover:text-[var(--primary-color)]">Learn about BER <FaChevronRight className="group-hover:translate-x-2" size={15}/></Link>
-            </div>
-            <div className='w-full max-w-xl xl:px-8 xl:w-5/12'>
-              <div className='relative'>
-                <Form />
-              </div>
+              {successMessage && (
+                <p
+                  className={`absolute w-full top-full left-1/2 -translate-x-1/2 px-4 py-2 mb-2 rounded shadow ${
+                    successMessage ===
+                    "Email sent 🚀 - We will be in touch asap."
+                      ? "bg-emerald-600"
+                      : "bg-rose-600"
+                  }`}
+                >
+                  {successMessage}
+                </p>
+              )}
             </div>
           </div>
         </div>

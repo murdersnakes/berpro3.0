@@ -25,6 +25,11 @@ const navlinks = [
     icon: <FaSortAmountUpAlt />,
   },
   {
+    name: "Booking Online",
+    link: "/booking-online",
+    icon: <FaBars />,
+  },
+  {
     name: "Blog",
     link: "/blog",
     icon: <FaBook />,
@@ -96,7 +101,7 @@ export default function Navbar() {
                   href={link.link}
                   aria-label={link.name}
                   title={link.name}
-                  className='flex px-4 py-2 items-center gap-1 font-head rounded hover:bg-[var(--text-color)] border-2 border-transparent hover:border-black hover:text-black transition-all'
+                  className='flex px-4 whitespace-nowrap py-2 items-center gap-1 h4 text-xs rounded hover:bg-[var(--text-color)] border-2 border-transparent hover:border-black hover:text-black transition-all'
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

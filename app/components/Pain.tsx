@@ -6,7 +6,7 @@ import image3 from "../../public/solution.svg";
 
 export default function Pain() {
   return (
-    <div>
+    <section id="pain-section">
       <div className=''>
         <div className='pt-24 pb-12 bg-[var(--text-color)] text-[var(--body-color)]'>
           <div className=' cont  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center '>
@@ -58,6 +58,6 @@ export default function Pain() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
