@@ -11,7 +11,7 @@ export default function CTA() {
             your energy bills.
           </h1>
           <Link
-            href='/bookings'
+            href='/booking-online'
             aria-label='Book now'
             className='flex-shrink-0 text-white bg-emerald-600 border-0 py-2 px-8 focus:outline-none hover:bg-emerald-700 rounded text-lg mt-10 sm:mt-0 font-bold '
           >
