@@ -142,7 +142,7 @@ export default function Form() {
   // };
 
   return (
-    <div className='max-w-2xl mx-auto text-[var(--body-color)] border-2 border-black bg-neutral-100 rounded shadow-lg'>
+    <div className='max-w-2xl mx-auto text-[var(--body-color)] border border-black bg-neutral-100 rounded shadow-lg'>
       <h2 className='text-center h3 pt-6'>Book an appointment</h2>
       {/* <p className='h4 text-base text-center text-emerald-600'>
         *Fill in building details for Quote*
@@ -161,7 +161,7 @@ export default function Form() {
         <span className='h4 border-t-2 pt-4'>Contact Details</span>
         <div className='flex gap-2'>
           <input
-            className='w-full'
+            className='w-full rounded'
             placeholder='Name'
             required
             type='text'
@@ -170,7 +170,7 @@ export default function Form() {
             autoComplete='name'
           />
           <input
-            className='w-full'
+            className='w-full rounded'
             placeholder='Email'
             required
             type='email'
@@ -182,7 +182,7 @@ export default function Form() {
 
         <div className='flex gap-2'>
           <input
-            className='w-full'
+            className='w-full rounded'
             placeholder='Phone'
             required
             type='tel'
@@ -192,7 +192,7 @@ export default function Form() {
           />
 
           <input
-            className='w-full'
+            className='w-full rounded'
             placeholder='Eircode'
             type='text'
             value={eircode}
@@ -213,7 +213,7 @@ export default function Form() {
           <>
             <div className='flex gap-2'>
               <input
-                className='w-full'
+                className='w-full rounded'
                 placeholder='Address Line 1'
                 required
                 type='text'
@@ -221,7 +221,7 @@ export default function Form() {
                 onChange={(e) => setAddressLine1(e.target.value)}
               />
               <input
-                className='w-full'
+                className='w-full rounded'
                 placeholder='Address Line 2'
                 type='text'
                 value={addressLine2}
@@ -231,7 +231,7 @@ export default function Form() {
 
             <div className='flex gap-2 '>
               <input
-                className='w-full'
+                className='w-full rounded'
                 placeholder='City'
                 required
                 type='text'
@@ -239,7 +239,7 @@ export default function Form() {
                 onChange={(e) => setCity(e.target.value)}
               />
               <input
-                className='w-full'
+                className='w-full rounded'
                 placeholder='County'
                 required
                 type='text'
@@ -253,7 +253,7 @@ export default function Form() {
         <span className='h4 border-t-2 pt-4'>Building Details</span>
         <div className='flex gap-2 mb-4'>
           <select
-            className='w-full'
+            className='w-full rounded'
             required
             value={buildingType}
             onChange={(e) => {
@@ -274,7 +274,7 @@ export default function Form() {
             <option value='townhouse'>Townhouse</option>
           </select>
           <input
-            className='w-full'
+            className='w-full rounded'
             placeholder='Number of rooms'
             required
             type='number'
@@ -290,7 +290,7 @@ export default function Form() {
 
         <span className='h4 border-t-2 pt-4'>Appointment Date</span>
         <ReactDatePicker
-          className='w-full mb-4'
+          className='w-full rounded mb-4'
           selected={dateTime}
           onChange={(date) => setDateTime(date)}
           showTimeSelect

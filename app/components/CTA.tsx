@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CTA() {
   return (
-    <div className='bg-[var(--body-color)] border-y-4 shadow-xl '>
+    <div className='bg-[var(--body-color)] '>
       <div className='cont py-24 mx-auto '>
         <div className='lg:w-2/3 flex flex-col sm:flex-row items-center justify-center text-center mx-auto'>
           <h1 className='flex-grow sm:pr-16 h3 text-white'>
