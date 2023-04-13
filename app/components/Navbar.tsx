@@ -90,8 +90,8 @@ export default function Navbar() {
           ref={menuRef}
           className={`absolute top-full right-0 w-full max-w-md py-12 rounded-bl-lg shadow-xl md:shadow-none space-y-3 md:space-y-0 md:py-1 md:relative md:min-h-fit md:w-auto md:translate-x-0 bg-[var(--body-color)] text-[var(--text-color)] z-40 transition-all duration-500 ${
             isOpen
-              ? "translate-y-0 opacity-100 scale-100"
-              : "translate-y-1/2 opacity-0 scale-95"
+              ? "block"
+              : "hidden"
           } md:translate-y-0 md:opacity-100 md:scale-100 md:flex`}
         >
           {navlinks.map((link) => {
