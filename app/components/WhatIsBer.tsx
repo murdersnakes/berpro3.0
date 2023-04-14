@@ -6,7 +6,7 @@ import hero from "../../public/hero.webp";
 
 export default function WhatIsBer() {
   return (
-    <div className='bg-[var(--text-color)] text-[var(--body-color)]'>
+    <div className='bg-light text-dark'>
       <div className='cont py-24'>
         <div className='flex flex-col max-w-screen-lg overflow-hidden bg-neutral-100 border rounded shadow-sm lg:flex-row sm:mx-auto'>
           <div className='relative lg:w-1/2'>
@@ -25,7 +25,7 @@ export default function WhatIsBer() {
           </div>
           <div className='flex flex-col justify-center p-8 bg-neutral-100 lg:p-16 lg:pl-10 lg:w-1/2'>
             <div>
-              <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-emerald-700'>
+              <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-acchov1'>
                 What is BER
               </p>
             </div>
@@ -37,17 +37,13 @@ export default function WhatIsBer() {
               energy-efficient and G being the least energy-efficient.
             </p>
             <div className='flex items-center'>
-              <Link
-                href='/contact'
-                type='submit'
-                className='inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-emerald-600 hover:bg-emerald-700 focus:shadow-outline focus:outline-none'
-              >
+              <Link href='/contact' type='submit' className='btn-1'>
                 Get in touch
               </Link>
               <Link
                 href='/about-ber'
-                aria-label=''
-                className='group inline-flex gap-2 items-baseline font-semibold transition-colors duration-200 hover:text-indigo-600'
+                aria-label='learn about BER'
+                className='btn-link flex items-center gap-2 group'
               >
                 Learn More
                 <FaChevronRight className='text-xs group-hover:translate-x-2 transition-transform duration-300' />

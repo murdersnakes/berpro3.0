@@ -6,7 +6,7 @@ import image2 from '../../public/compare.svg';
 
 export default function CalculatingBer() {
 	return (
-		<div className='text-[var(--body-color)] bg-[var(--text-color)]'>
+		<div className='text-dark bg-light'>
 			<div className='relative pt-24 pb-12'>
 				<div className='relative cont  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center '>
 					<Image
@@ -16,7 +16,7 @@ export default function CalculatingBer() {
 					/>
 					<div className='text-center lg:text-left '>
 						<h4 className='h2'>Calculating a BER</h4>
-						<p className='p2 mt-3 '>
+						<p className='p1 mt-3 text-dark/60'>
 							A BER is determined by the amount of energy a home requires for
 							space and hot water heating, ventilation, and lighting. The
 							calculation utilises the Dwelling Energy Assessment Procedure
@@ -40,7 +40,7 @@ export default function CalculatingBer() {
 				<div className='cont grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
 					<div className='text-center lg:text-left row-start-2 lg:row-start-1'>
 						<h4 className='h2'>On a like-for-like basis</h4>
-						<p className='p2 mt-3'>
+						<p className='p1 mt-3 text-dark/60'>
 							The BER energy rating focuses on the building itself, its fabric,
 							and installed systems, rather than the energy consumption of the
 							occupants. This allows prospective buyers or tenants to

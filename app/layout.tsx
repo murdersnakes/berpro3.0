@@ -2,8 +2,9 @@ import React from "react";
 import "../styles/globals.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { Archivo, Open_Sans } from "next/font/google";
+import { Archivo, Inter } from "next/font/google";
 import { Metadata } from "next";
+import ContactBanner from "./components/ContactBanner";
 
 export const metadata: Metadata = {
   title: "BERpro: BER Assessments & Certificates for Energy-Efficient Homes",
@@ -81,7 +82,7 @@ const headFont = Archivo({
   display: "swap",
 });
 
-const bodyFont = Open_Sans({
+const bodyFont = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -91,6 +92,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' className={`${headFont.variable} ${bodyFont.variable}`}>
       <body>
+        <ContactBanner />
         <Navbar />
         <main>{children}</main>
         <Footer />

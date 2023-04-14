@@ -6,8 +6,8 @@ export default function page() {
     <div className='bg-[var(--text-color)] text-[var(--body-color)]'>
       <div className='cont py-24'>
         <div className='flex flex-col md:flex-row gap-12'>
-          <div className='prose prose-h2:font-head prose-p:font-body prose-p:text-neutral-600'>
-            <h2 className=''>Online Booking Terms and Conditions</h2>
+          <div className='prose prose-h1:h2 prose-p:p1 prose-p:text-dark/75'>
+            <h1>Online Booking Terms and Conditions</h1>
             <p>
               Welcome to our online booking page! We are delighted to offer you
               the convenience of booking our services online. Please note that

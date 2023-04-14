@@ -64,7 +64,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className='relative bg-[var(--body-color)] bg-opacity-90'>
+    <div className='relative bg-dark text-light'>
       <div className='cont flex justify-between items-center py-2'>
         <Link
           href='/'
@@ -82,21 +82,19 @@ export default function Navbar() {
           onClick={handleMenu}
           aria-label='Open Menu'
           title='Open Menu'
-          className='flex p-3 md:hidden justify-center items-center rounded bg-[var(--body-color-hover)] bg-opacity-50'
+          className='flex p-3 md:hidden justify-center items-center rounded bg-light text-dark'
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
         <ul
           ref={menuRef}
-          className={`absolute top-full right-0 w-full max-w-md py-12 rounded-bl-lg shadow-xl md:shadow-none space-y-3 md:space-y-0 md:py-1 md:relative md:min-h-fit md:w-auto md:translate-x-0 bg-[var(--body-color)] text-[var(--text-color)] z-40 transition-all duration-500 ${
-            isOpen
-              ? "block"
-              : "hidden"
-          } md:translate-y-0 md:opacity-100 md:scale-100 md:flex`}
+          className={`absolute top-full right-0 w-full py-12 md:py-1 shadow-xl md:shadow-none space-y-3 md:space-y-0  md:relative md:min-h-fit md:w-auto bg-light md:bg-dark text-dark md:text-light z-40 trans ${
+            isOpen ? "block" : "hidden"
+          }   md:flex`}
         >
           {navlinks.map((link) => {
             return (
-              <li key={link.name} className='ml-4'>
+              <li key={link.name} className=''>
                 <Link
                   href={link.link}
                   aria-label={link.name}

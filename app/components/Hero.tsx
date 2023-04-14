@@ -79,12 +79,12 @@ export default function Hero() {
   return (
     <div className='-z-50'>
       {renderConfetti()}
-      <div className='relative bg-[var(--body-color)]'>
+      <div className='relative bg-dark text-light'>
         <div className='absolute inset-x-0 bottom-0'>
           <svg
             viewBox='0 0 224 12'
             fill='currentColor'
-            className='w-full -mb-1 text-neutral-300 -z-40'
+            className='w-full -mb-1 text-light -z-40'
             preserveAspectRatio='none'
           >
             <path d='M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z' />
@@ -92,13 +92,13 @@ export default function Hero() {
         </div>
         <div className='cont py-36'>
           <div className='relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center'>
-            <h1 className=' mb-6 h1'>
-              Get a <span className='text-emerald-400'>BER Cert</span>
+            <h1 className=' mb-6 h1 text-white'>
+              Get a <span className='text-acc1'>BER Cert</span>
               <span className='inline-block text-deep-purple-accent-400'>
                 in Meath, Louth and Dublin
               </span>
             </h1>
-            <p className='mb-6 text-base text-neutral-100 md:text-lg'>
+            <p className='mb-6 text-base md:text-lg'>
               Need a Building Energy Rating (BER) certificate for selling or
               renting your home? Looking for SEAI grants to upgrade your energy
               systems? BERpro has got you covered.
@@ -114,11 +114,11 @@ export default function Hero() {
                 type='email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className='flex-grow w-full h-12 px-4 mb-3 text-white transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline'
+                className='flex-grow w-full h-12 px-4 mb-3 text-dark transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline'
               />
               <button
                 type='submit'
-                className='gap-2 inline-flex whitespace-nowrap items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto hover:text-deep-purple-900 bg-emerald-600 hover:bg-emerald-700 focus:shadow-outline focus:outline-none'
+                className='gap-2 inline-flex whitespace-nowrap items-center justify-center w-full h-12 btn-1 md:w-auto '
               >
                 Get a Quote
                 {renderButtonIcon()}
@@ -128,7 +128,7 @@ export default function Hero() {
               <p className='max-w-md pb-3 mb-10 text-xs tracking-wide neutral-100 sm:text-sm sm:mx-auto md:mb-16'>
                 We respect your privacy and will never share your information.
                 Please see our{" "}
-                <Link className='link' href='/privacy-policy'>
+                <Link className='link-light' href='/privacy-policy'>
                   Privacy Policy
                 </Link>{" "}
                 for more information.
@@ -138,8 +138,8 @@ export default function Hero() {
                   className={`absolute w-full top-full left-1/2 -translate-x-1/2 px-4 py-2 mb-2 rounded shadow ${
                     successMessage ===
                     "Email sent 🚀 - We will be in touch asap."
-                      ? "bg-emerald-600"
-                      : "bg-rose-600"
+                      ? "bg-acc1 text-white"
+                      : "bg-acchov3 text-black"
                   }`}
                 >
                   {successMessage}

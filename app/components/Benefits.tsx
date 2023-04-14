@@ -3,11 +3,11 @@ import { FaBolt, FaCheck, FaFile, FaMoneyBill } from "react-icons/fa";
 
 export default function Benefits() {
   return (
-    <div className='bg-neutral-300 text-[var(--body-color)]'>
+    <div className='bg-light/95 text-dark'>
       <div className='cont py-24'>
         <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
           <div>
-            <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-indigo-700'>
+            <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-acc2 text-white'>
               Why Choose Us?
             </p>
           </div>
@@ -23,7 +23,7 @@ export default function Benefits() {
         <div className='grid max-w-screen-lg gap-8 row-gap-10 mx-auto lg:grid-cols-2'>
           <div className='flex flex-col max-w-md sm:mx-auto sm:flex-row'>
             <div className='mr-4'>
-              <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-700 text-[var(--text-color)]'>
+              <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-acc2 text-[var(--text-color)]'>
                 <FaBolt />
               </div>
             </div>
@@ -39,7 +39,7 @@ export default function Benefits() {
           </div>
           <div className='flex flex-col max-w-md sm:mx-auto sm:flex-row'>
             <div className='mr-4'>
-              <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-700 text-[var(--text-color)]'>
+              <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-acc2 text-[var(--text-color)]'>
                 <FaCheck />
               </div>
             </div>
@@ -57,7 +57,7 @@ export default function Benefits() {
           </div>
           <div className='flex flex-col max-w-md sm:mx-auto sm:flex-row'>
             <div className='mr-4'>
-              <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-700 text-[var(--text-color)]'>
+              <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-acc2 text-[var(--text-color)]'>
                 <FaMoneyBill />
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function Benefits() {
           </div>
           <div className='flex flex-col max-w-md sm:mx-auto sm:flex-row'>
             <div className='mr-4'>
-              <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-indigo-700 text-[var(--text-color)]'>
+              <div className='flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-acc2 text-[var(--text-color)]'>
                 <FaFile />
               </div>
             </div>

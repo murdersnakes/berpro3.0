@@ -31,57 +31,53 @@ body {
   }
 }
 
-@layer base{
 
-  .cont{
-    @apply max-w-7xl px-5 mx-auto
+
+  @layer base{
+    .cont{
+      @apply max-w-7xl mx-auto px-5
+    }
+    .h1{
+      @apply font-head font-extrabold text-3xl sm:text-5xl leading-none tracking-tight
+    }
+    .p1{
+      @apply font-body font-medium text-base sm:text-lg leading-relaxed
+    }
+    .h2{
+      @apply font-head font-extrabold text-2xl sm:text-3xl leading-none tracking-tight
+    }
+    .p2{
+      @apply font-body font-normal text-sm sm:text-base leading-relaxed
+    }
+    .h3{
+      @apply font-head font-bold text-xl sm:text-2xl leading-none tracking-tight
+    }
+    .p3{
+      @apply font-body font-normal text-xs sm:text-sm leading-relaxed
+    }
+    .h4{
+      @apply font-head font-bold text-lg sm:text-xl leading-none tracking-tight
+    }
+    .link-light{
+      @apply underline text-light hover:text-acc1 trans 
+    }
+    .link-dark{
+      @apply underline text-dark hover:text-acc2 trans
+    }
+    .trans {
+      @apply transition-all duration-300 ease-in-out
+    }
+    .btn-1{
+      @apply py-3 px-4 bg-acc1 hover:bg-acchov1 rounded shadow font-head font-bold text-white uppercase tracking-widest trans
+    }
+    .btn-2{
+      @apply py-3 px-4 bg-acc2 hover:bg-acchov2 rounded shadow font-head font-bold text-white uppercase tracking-widest trans
+    }
+    .btn-link{
+      @apply py-3 px-4 bg-transparent rounded font-head font-bold uppercase tracking-widest trans
+    }
   }
-  .h1{
-    @apply font-head text-4xl font-bold leading-none sm:text-5xl
-  }
-  .p1{
-    @apply font-body text-base md:text-lg
-  }
-  .h2{
-    @apply font-head text-2xl font-bold leading-none sm:text-3xl
-  }
-  .p2{
-    @apply font-body text-sm md:text-base
-  }
-  .h3{
-    @apply font-head text-xl font-bold leading-none sm:text-2xl
-  }
-  .p3{
-    @apply font-body text-sm
-  }
-  .h4{
-    @apply font-head text-lg font-bold leading-none sm:text-xl
-  }
-  .p4{
-    @apply font-body text-xs
-  }
-  .btn{
-    @apply font-normal text-sm tracking-wider text-[var(--body-color)] bg-[var(--primary-color)] rounded-md px-3 py-2 border border-[var(--primary-color)]
-  }
-  .btn:hover{
-    @apply bg-[var(--primary-color-hover)] transition-all
-  }
-  .btn-2{
-    @apply  text-[var(--primary-color)] bg-[var(--body-color)] rounded-md hover:text-[var(--body-color)] hover:bg-[var(--primary-color)]
-  }
-  .btn-ghost{
-    @apply  text-[var(--primary-color)] bg-transparent rounded-md hover:bg-[var(--body-color-hover)] shadow border-transparent
-  }
-  .box{
-    @apply p-5 bg-[var(--text-color)] rounded-md shadow-md text-[var(--body-color)]
-  }
-  .link{
-    @apply underline hover:text-[var(--text-color-hover)] transition-all
-  }
-  .link-2{
-    @apply underline hover:text-[var(--primary-color)] transition-all
-  }
-}
+
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
