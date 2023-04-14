@@ -16,7 +16,7 @@ export default function page() {
       <CTA />
       <Pricing />
       <Benefits />
-      <Testimonials Autoplay={undefined} />
+      <Testimonials/>
       <Blog />
     </div>
   );
