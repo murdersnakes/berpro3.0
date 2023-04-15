@@ -11,7 +11,7 @@ import {
   FaTimes,
   FaSortAmountUpAlt,
 } from "react-icons/fa";
-import logo from "../../public/logo_white.svg";
+import logo from "../../public/logo_official_white.svg";
 
 const navlinks = [
   {
@@ -70,7 +70,7 @@ export default function Navbar() {
           href='/'
           aria-label='Berpro, Back to homepage'
           title='Berpro, Back to homepage'
-          className=''
+          className='w-16 aspect-square object-contain object-center'
         >
           <Image
             src={logo}

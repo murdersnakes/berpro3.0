@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import logo from "../../public/logo_white.svg";
+import logo from "../../public/logo_official_white.svg";
 import {
   FaEnvelope,
   FaEnvelopeOpenText,
@@ -23,7 +23,7 @@ export default function Footer() {
               <Image
                 src={logo}
                 alt='BERpro Logo'
-                className='w-24 object-contain object-center'
+                className='w-12 aspect-square object-contain object-center'
               />
             </Link>
             <div className='mt-6 lg:max-w-sm'>
