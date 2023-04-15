@@ -94,13 +94,13 @@ export default function layout({ children }: { children: React.ReactNode }) {
 			lang="en"
 			className={`${headFont.variable} ${bodyFont.variable}`}
 		>
-			<body className='relative'>
-				<div className='fixed top-0 left-0 z-50 w-full'>
+			<body className="relative">
+				<div className="fixed top-0 left-0 z-40 w-full">
 					<ContactBanner />
 				</div>
-        <div className='relative pt-12'>
-				<Navbar />
-        </div>
+				<div className="absolute top-0 left-0 z-50 w-full pt-12">
+					<Navbar />
+				</div>
 				<main>{children}</main>
 				<Footer />
 			</body>

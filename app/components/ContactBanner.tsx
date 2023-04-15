@@ -19,8 +19,11 @@ export default function ContactBanner() {
 	}, []);
 
 	return (
-		<div className={`bg-amber-400 text-dark h4 py-1 trans ${isOpaque == true ? "bg-opacity-50 bg-white" : "bg-opacity-100"}`}>
-
+		<div
+			className={`bg-amber-400 text-dark h4 py-1 trans ${
+				isOpaque == true ? 'bg-opacity-50 bg-white' : 'bg-opacity-100'
+			}`}
+		>
 			<Link
 				className="block text-center py-1 px-2 cont hover:text-acc2 trans underline"
 				href={`tel:${contact.phone}`}
