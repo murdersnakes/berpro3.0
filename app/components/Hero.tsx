@@ -3,8 +3,10 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaSpinner, FaCheck, FaTimes } from "react-icons/fa";
+import seai from "../../public/seai_logo.svg"
 
 import Confetti from "react-confetti";
+import Image from "next/image";
 
 export default function Hero() {
   const [email, setEmail] = useState("");
@@ -90,9 +92,10 @@ export default function Hero() {
             <path d='M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z' />
           </svg>
         </div>
-        <div className='cont py-36'>
-          <div className='relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center'>
-            <h1 className=' mb-6 h1 text-white'>
+        <div className='cont py-12 sm:py-24 md:py-36'>
+          <div className='relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center flex flex-col items-start sm:items-center justify-center'>
+            <Image src={seai} alt="seai logo" className="w-36 object-contain bg-light p-3 rounded-xl" />
+            <h1 className=' my-6 h1 text-white'>
               Get a <span className='text-acc1'>BER Cert</span>
               <span className='inline-block text-deep-purple-accent-400'>
                 in Meath, Louth and Dublin
