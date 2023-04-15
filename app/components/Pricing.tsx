@@ -32,7 +32,7 @@ export default function Pricing() {
             </p>
             <p className='p2 leading-relaxed mt-8'>
               We believe in providing our clients with transparent and upfront
-              pricing information. That&apos;s why we offer personalized quotes
+              pricing information. That&apos;s why we offer personalised quotes
               based on your individual needs and the size of your property. This
               way, you can have peace of mind knowing exactly what to expect
               when it comes to the cost of our services.
