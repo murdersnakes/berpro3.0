@@ -14,7 +14,7 @@ export default function Benefits() {
           <h5 className='max-w-lg mb-6 h2 md:mx-auto'>
             Benefits of Choosing BERpro for Your Energy Assessments
           </h5>
-          <p className='text-base text-neutral-700 md:text-lg'>
+          <p className='p1 text-dark/60'>
             BERpro offers fast, easy, accurate, and budget-friendly assessments
             for a Building Energy Rating (BER) certificate, enabling you to sell
             or rent your home and access SEAI grants for retrofitting.
@@ -29,7 +29,7 @@ export default function Benefits() {
             </div>
             <div>
               <h6 className='mb-3 h3 font-bold leading-5'>Fast and Easy</h6>
-              <p className='mb-3 p3'>
+              <p className='mb-3 p3 text-dark/75'>
                 At BERpro, we value your time. Our certified energy assessors
                 use the latest technology to quickly and accurately assess your
                 property&apos;s energy efficiency. We work around your schedule
@@ -47,7 +47,7 @@ export default function Benefits() {
               <h6 className='mb-3 h3 font-bold leading-5'>
                 Accurate and Reliable
               </h6>
-              <p className='mb-3 p3'>
+              <p className='mb-3 p3 text-dark/75'>
                 Our certified energy assessors take pride in delivering accurate
                 and reliable energy assessments to our clients. We use
                 state-of-the-art equipment and software and are highly trained
@@ -63,7 +63,7 @@ export default function Benefits() {
             </div>
             <div>
               <h6 className='mb-3 h3 font-bold leading-5'>Low-Cost</h6>
-              <p className='mb-3 p3'>
+              <p className='mb-3 p3 text-dark/75'>
                 We believe in affordable energy assessments for everyone. Our
                 low-cost assessments do not compromise on quality or accuracy.
                 We provide transparent pricing and always provide a detailed
@@ -81,7 +81,7 @@ export default function Benefits() {
               <h6 className='mb-3 h3 font-bold leading-5'>
                 Comprehensive Reports
               </h6>
-              <p className='mb-3 p3'>
+              <p className='mb-3 p3 text-dark/75'>
                 Our comprehensive reports provide a detailed analysis of your
                 property&apos;s energy performance, including recommendations
                 for improving energy efficiency and estimated cost savings.
