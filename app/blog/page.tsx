@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaChevronRight } from "react-icons/fa";
+import { Metadata } from "next";
 import blogPosts, { BlogPosts } from "../../data/blogPosts";
+
+export const metadata: Metadata = {
+  title: "BERpro Blog | Energy Efficiency Tips, News and Insights",
+  description:
+    "Explore the BERpro Blog for the latest news, insights, and tips on energy efficiency, building energy ratings, and sustainable living. Stay up-to-date with industry developments and learn how to make your home more eco-friendly.",
+};
 
 export default function page(): JSX.Element {
   const data: BlogPosts[] = blogPosts;

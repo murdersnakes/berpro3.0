@@ -1,5 +1,12 @@
 import React from "react";
 import Form from "../components/Form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Booking your BER Appointment | Easy Online Booking",
+  description:
+    "Book your Building Energy Rating (BER) assessment online with BERpro, a leading provider of efficient and reliable energy performance certification services for homes and properties across Ireland. Secure your appointment today for a fast, professional evaluation.",
+};
 
 export default function page() {
   return (

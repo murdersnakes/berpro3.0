@@ -2,6 +2,7 @@ import React from "react";
 import policyData from "../../../data/policies";
 import { Metadata } from "next";
 
+
 export async function generateMetadata({ params }): Promise<Metadata> {
   const { slug } = params;
   const policy = policyData.find((policy): boolean => policy.slug === slug);

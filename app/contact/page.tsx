@@ -4,6 +4,13 @@ import React from "react";
 import { FaEnvelope, FaPhone, FaPhoneAlt } from "react-icons/fa";
 import contact from "../../data/contactData";
 import image from "../../public/phone.webp";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact BERpro | Building Energy Rating Assessments and Certificates",
+  description:
+    "Get in touch with the BERpro team for professional Building Energy Rating assessments and certificates. Contact us with your queries or to schedule an appointment, and our experts will guide you through the process to make your home energy-efficient.",
+};
 
 export default function page() {
   return (

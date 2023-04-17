@@ -16,7 +16,7 @@ export default function page() {
       <CTA />
       <Pricing />
       <Benefits />
-      <Testimonials/>
+      <Testimonials />
       <Blog />
     </div>
   );
