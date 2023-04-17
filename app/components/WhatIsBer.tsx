@@ -29,7 +29,7 @@ export default function WhatIsBer() {
                 What is BER
               </p>
             </div>
-            <h5 className='h2 mb-3'>Building Energy Rating</h5>
+            <h2 className='h2 mb-3'>Building Energy Rating</h2>
             <p className='mb-5 text-neutral-600'>
               <span className='font-bold'>A BER</span> is a measure of a
               building&apos;s energy efficiency and is usually expressed as a

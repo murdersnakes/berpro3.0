@@ -14,10 +14,10 @@ export default function Pricing() {
 				<div className="flex flex-col lg:flex-row-reverse">
 					<div className="mb-4 lg:mb-0 lg:w-1/2 lg:pr-5"></div>
 					<div className="lg:w-1/2 text-dark/60">
-						<p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-acchov3 text-white">
+						<p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-acc3 text-dark">
 							Pricing
 						</p>
-						<h2 className=" h2 text-dark">How much does it cost?</h2>
+						<h4 className=" h2 text-dark">How much does it cost?</h4>
 						<p className="p1 leading-relaxed mt-8 ">
 							we offer affordable and competitive pricing for our Building
 							Energy Rating assessments. Our pricing structure is based on the

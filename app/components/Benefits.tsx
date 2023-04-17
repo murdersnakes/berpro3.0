@@ -11,9 +11,9 @@ export default function Benefits() {
               Why Choose Us?
             </p>
           </div>
-          <h4 className='max-w-lg mb-6 h2 md:mx-auto'>
+          <h5 className='max-w-lg mb-6 h2 md:mx-auto'>
             Benefits of Choosing BERpro for Your Energy Assessments
-          </h4>
+          </h5>
           <p className='text-base text-neutral-700 md:text-lg'>
             BERpro offers fast, easy, accurate, and budget-friendly assessments
             for a Building Energy Rating (BER) certificate, enabling you to sell
@@ -28,7 +28,7 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h5 className='mb-3 h3 font-bold leading-5'>Fast and Easy</h5>
+              <h6 className='mb-3 h3 font-bold leading-5'>Fast and Easy</h6>
               <p className='mb-3 p3'>
                 At BERpro, we value your time. Our certified energy assessors
                 use the latest technology to quickly and accurately assess your
@@ -44,9 +44,9 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h5 className='mb-3 h3 font-bold leading-5'>
+              <h6 className='mb-3 h3 font-bold leading-5'>
                 Accurate and Reliable
-              </h5>
+              </h6>
               <p className='mb-3 p3'>
                 Our certified energy assessors take pride in delivering accurate
                 and reliable energy assessments to our clients. We use
@@ -62,7 +62,7 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h5 className='mb-3 h3 font-bold leading-5'>Low-Cost</h5>
+              <h6 className='mb-3 h3 font-bold leading-5'>Low-Cost</h6>
               <p className='mb-3 p3'>
                 We believe in affordable energy assessments for everyone. Our
                 low-cost assessments do not compromise on quality or accuracy.
@@ -78,9 +78,9 @@ export default function Benefits() {
               </div>
             </div>
             <div>
-              <h5 className='mb-3 h3 font-bold leading-5'>
+              <h6 className='mb-3 h3 font-bold leading-5'>
                 Comprehensive Reports
-              </h5>
+              </h6>
               <p className='mb-3 p3'>
                 Our comprehensive reports provide a detailed analysis of your
                 property&apos;s energy performance, including recommendations

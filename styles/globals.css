@@ -68,7 +68,7 @@ body {
       @apply transition-all duration-300 ease-in-out
     }
     .btn-1{
-      @apply py-3 px-4 bg-acc1 hover:bg-acchov1 rounded shadow font-head font-bold text-white uppercase tracking-widest trans
+      @apply py-3 px-4 bg-acc1 hover:bg-acchov1 rounded shadow font-head font-bold text-dark hover:text-light uppercase tracking-widest trans
     }
     .btn-2{
       @apply py-3 px-4 bg-acc2 hover:bg-acchov2 rounded shadow font-head font-bold text-white uppercase tracking-widest trans
