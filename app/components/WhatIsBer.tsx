@@ -25,7 +25,7 @@ export default function WhatIsBer() {
           </div>
           <div className='flex flex-col justify-center p-8 bg-neutral-100 lg:p-16 lg:pl-10 lg:w-1/2'>
             <div>
-              <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-acchov1'>
+              <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-dark uppercase rounded-full bg-acchov1'>
                 What is BER
               </p>
             </div>
@@ -42,8 +42,9 @@ export default function WhatIsBer() {
               </Link>
               <Link
                 href='/about-ber'
-                aria-label='learn about BER'
+                aria-label='learn more about BER'
                 className='btn-link flex items-center gap-2 group'
+                title='learn all about BER by clicking here'
               >
                 Learn More
                 <FaChevronRight className='text-xs group-hover:translate-x-2 transition-transform duration-300' />

@@ -8,7 +8,7 @@ export default function Prepare() {
       <div className='cont py-24'>
         <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-24'>
           <div>
-            <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-[var(--text-color)] uppercase rounded-full bg-acc2'>
+            <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-acc2'>
               The BER Assessment Process
             </p>
           </div>

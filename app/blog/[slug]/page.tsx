@@ -43,6 +43,7 @@ export default function page({ params }) {
           height={500}
           className='py-8 object-cover h-96 rounded-xl overflow-hidden'
           alt={post.title}
+		  priority
         />
         <div
           className='prose prose-h1:h2 prose-h2:h3 prose-h3:h4 prose-p:p2 prose-li:p2 '

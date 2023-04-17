@@ -13,7 +13,7 @@ export default function FactorsEffectingBer() {
     <div className='bg-light text-dark '>
       <div className='cont py-24'>
         <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
-        <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-[var(--text-color)] uppercase rounded-full bg-acchov1'>
+        <p className='inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-dark uppercase rounded-full bg-acc1'>
               The basics
             </p>
           <h4 className='max-w-lg mb-4 h2 md:mx-auto'>
