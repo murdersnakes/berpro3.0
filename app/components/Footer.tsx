@@ -23,7 +23,7 @@ export default function Footer() {
               <Image
                 src={logo}
                 alt='BERpro Logo'
-                className='w-12 aspect-square object-contain object-center'
+                className='w-12 object-contain object-center'
               />
             </Link>
             <div className='mt-6 lg:max-w-sm'>
@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <ul className='h2 flex flex-col justify-around md:items-end  text-neutral-400'>
+          <ul className='h3 flex flex-col justify-around md:items-end  text-neutral-400'>
             <li>
               <Link
                 href={`tel:${contact.phone}`}

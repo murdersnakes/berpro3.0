@@ -159,7 +159,7 @@ export default function Form() {
         className='form w-full flex flex-col gap-2 pb-7 px-7'
       >
         <span className='h4 border-t-2 pt-4'>Contact Details</span>
-        <div className='flex gap-2'>
+        <div className='flex flex-col md:flex-row gap-2'>
           <input
             className='w-full rounded'
             placeholder='Name'
@@ -180,7 +180,7 @@ export default function Form() {
           />
         </div>
 
-        <div className='flex gap-2'>
+        <div className='flex flex-col md:flex-row gap-2'>
           <input
             className='w-full rounded'
             placeholder='Phone'
@@ -205,13 +205,14 @@ export default function Form() {
           type='button'
           onClick={() => setShowAddressSection(!showAddressSection)}
           className='underline text-[var(--primary-color)] text-left ml-3 p4 mb-4'
+          title='Click here to fill in your address manually'
         >
           Don&apos;t have an eircode?
         </button>
 
         {showAddressSection && (
           <>
-            <div className='flex gap-2'>
+            <div className='flex flex-col md:flex-row gap-2'>
               <input
                 className='w-full rounded'
                 placeholder='Address Line 1'
@@ -229,7 +230,7 @@ export default function Form() {
               />
             </div>
 
-            <div className='flex gap-2 '>
+            <div className='flex flex-col md:flex-row gap-2'>
               <input
                 className='w-full rounded'
                 placeholder='City'
@@ -251,7 +252,7 @@ export default function Form() {
         )}
 
         <span className='h4 border-t-2 pt-4'>Building Details</span>
-        <div className='flex gap-2 mb-4'>
+        <div className='flex flex-col md:flex-row gap-2 mb-4'>
           <select
             className='w-full rounded'
             required
@@ -328,7 +329,7 @@ export default function Form() {
         <p className='p3'>
           We respect your privacy and will never share your information. Please
           see our{" "}
-          <Link className='link' href='/privacy-policy'>
+          <Link className='link-dark' href='/policies/privacy-policy'>
             Privacy Policy
           </Link>{" "}
           for more information.

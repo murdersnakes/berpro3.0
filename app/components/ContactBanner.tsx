@@ -20,7 +20,7 @@ export default function ContactBanner() {
 
 	return (
 		<div
-			className={`bg-amber-400 text-dark h4 py-1 trans ${
+			className={`fixed top-0 z-40 w-full bg-amber-400 text-dark h4 py-1 trans ${
 				isOpaque == true ? 'bg-opacity-50 bg-white' : 'bg-opacity-100'
 			}`}
 		>

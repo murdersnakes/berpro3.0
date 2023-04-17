@@ -91,19 +91,15 @@ const bodyFont = Inter({
 export default function layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html
-			lang="en"
-			className={`${headFont.variable} ${bodyFont.variable}`}
-		>
-			<body className="relative">
-				<div className="fixed top-0 left-0 z-40 w-full">
-					<ContactBanner />
-				</div>
-				<div className="absolute top-0 left-0 z-50 w-full pt-12">
-					<Navbar />
-				</div>
-				<main>{children}</main>
-				<Footer />
-			</body>
-		</html>
+            lang="en"
+            className={`${headFont.variable} ${bodyFont.variable}`}
+        >
+            <body className="relative">
+                <ContactBanner />
+                <Navbar />
+                <main>{children}</main>
+                <Footer />
+            </body>
+        </html>
 	);
 }
