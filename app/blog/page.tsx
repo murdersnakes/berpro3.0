@@ -6,6 +6,12 @@ import blogPosts, { BlogPosts } from "../../data/blogPosts";
 
 export default function page(): JSX.Element {
   const data: BlogPosts[] = blogPosts;
+
+  const sortedData = data.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
   return (
     <div className='text-dark bg-light'>
       <div className='cont py-24'>
@@ -13,7 +19,7 @@ export default function page(): JSX.Element {
           <h2 className='h2 text-center'>Latest Blog Posts</h2>
         </div>
         <div className='grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full'>
-          {data.map((post) => {
+          {sortedData.map((post) => {
             return (
               <Link
                 href={`/blog/${post.slug}`}
