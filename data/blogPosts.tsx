@@ -126,7 +126,7 @@ const blogPosts = [
     likes: 196,
     comments: 0,
     excerpt:
-      "Getting a BER certificate is mandatory for all properties in Ireland that are sold or rented. The cost of getting a BER certificate can vary depending on several factors, such as the size, complexity, location, and type of assessor. However, by understanding these factors and following the tips mentioned above, you can save money on the assessment and improve your property's energy efficiency.",
+      "U-Values, also known as thermal transmittance, may sound complicated, but they are crucial in the realm of insulation and energy efficiency. These little numbers tell us how effective a building material is at insulating or, in other words, how well it prevents heat from escaping or entering your home.",
     keywords: [
       "BER certificate",
       "BER assessor",
@@ -136,6 +136,29 @@ const blogPosts = [
     ],
     metaDescription:
       "Learn how to save money on the BER assessment and improve your property's energy efficiency.",
+  },
+  {
+    id: 6,
+    content:
+      "<h2>Introduction</h2><p>If you're a homeowner in Ireland, you've likely heard of the Building Energy Rating (BER) certificate. This certificate rates the energy efficiency of your home on a scale of A to G, with A being the most efficient and G being the least. The certificate is required by law when selling or renting a property, and it's important to keep a copy for your own records.</p><p>But what do you do if you've lost your BER cert or never received one in the first place? Don't worry, you're not alone. In this article, we'll cover everything you need to know about how to get a copy of your BER cert.</p><p><strong>How Do I Get a Copy of My BER Cert? Step-by-Step Guide</strong></p><ol><li><h3>Determine who issued your original BER cert</h3></li><p>The first step in obtaining a copy of your BER cert is to determine who issued the original certificate. BER certs are issued by registered BER assessors, and you should have received a copy of the certificate after the assessment was completed. Check any paperwork you have from the assessment or contact the assessor directly to determine who issued your original BER cert.</p><li><h3>Contact the assessor</h3></li><p>Once you have determined who issued your original BER cert, the next step is to contact the assessor. You can do this either by phone or email, and you will need to provide some basic information, such as your name and the address of the property. The assessor may also ask for additional information, such as the date of the assessment or the BER number.</p><li><strong>Request a copy of the cert</strong></li><p>Once you have contacted the assessor, you can request a copy of your BER cert. The assessor may be able to provide you with a digital copy of the cert, which can be emailed to you. Alternatively, they may need to send you a physical copy of the cert by post.</p><li><h3>Pay any fees</h3></li><p>Depending on the assessor, there may be a fee associated with obtaining a copy of your BER cert. The assessor should inform you of any fees before providing you with a copy of the cert. Fees can vary depending on the assessor, but they are typically in the range of €20-€50.</p><li><h3>Keep a record of the cert</h3></li><p>Once you have obtained a copy of your BER cert, it's important to keep a record of it. You should keep the cert in a safe place with your other important documents, such as your property deeds and insurance policies.</p></ol><h2>FAQs</h2><ul><li><strong>Q: Do I need a BER cert if I'm not selling or renting my property?</strong></li><p>A: No, a BER cert is only required by law when selling or renting a property. However, it's still a good idea to have a BER cert for your own records, as it can give you an idea of how energy efficient your home is.</p><li><strong>Q: Can I get a copy of my BER cert if the original assessor is no longer in business?</strong></li><p>A: Yes, you can still obtain a copy of your BER cert even if the original assessor is no longer in business. You can contact the Sustainable Energy Authority of Ireland (SEAI) for assistance in this case.<li><strong>Q: How long is a BER cert valid for?</strong></li><p>A: A BER cert is valid for 10 years from the date of issue. After this time, a new assessment will be required.</p><li><strong>Q: Can I sell or rent my property without a BER cert?</strong></li><p>A: No, it is illegal to sell or rent a property without a valid BER cert.</p><li><strong>Q: How long does it take to get a copy of my BER cert?</strong></li><p>A: The time it takes to obtain a copy of your BER cert can vary depending on the assessor. Some assessors may be able to provide you with a digital copy of the cert within a few hours, while others may need to send a physical copy by post, which can take a few days.</p><li><strong>Q: Can I get a copy of my BER cert online?</strong></li><p>A: It depends on the assessor who issued your original BER cert. Some assessors may be able to provide you with a digital copy of the cert that can be emailed to you. However, not all assessors offer this service, and you may need to request a physical copy of the cert by post.</p><li><strong>Q: What information is included in a BER cert?</strong></li><p>A: A BER cert includes information about the energy efficiency of your home, including the building's energy rating, the estimated annual energy usage, and recommendations for improving energy efficiency.</p></ul><h2>BERpro.ie Policy for Re-Issuing BER Certs</h2><p>At BERpro.ie, we understand the importance of having a copy of your BER cert. That's why we keep all BER certs secured in our database and provide copies to our clients free of charge. If you have lost your BER cert or never received one in the first place, simply contact us, and we will provide you with a copy as soon as possible.</p><p>We are committed to providing our clients with the best possible service, and we pride ourselves on our fast and efficient response times. Contact us today to get a copy of your BER cert.</p><p><strong>Contact Us</strong></p><ul><li><strong>Telephone:</strong><a href='0862488399'>0862488399</a></li><li><strong>Email:</strong><a href='mailto:info@berpro.ie'>info@berpro.ie</a></li><li><strong>Booking Page:</strong><a href='/booking-online'>Booking Online</a></li></ul><p>At BERpro.ie, we are always happy to help with any questions or concerns you may have about your BER cert. Contact us today for fast and reliable service.</p>",
+    title: "How Do I Get a Copy of My BER Cert?",
+    slug: "how-do-i-get-a-copy-of-my-ber-cert",
+    date: "03 Feb 2023",
+    image: "/findMyCert.webp",
+    author: "<Michael O'Reilly",
+    likes: 368,
+    comments: 0,
+    excerpt:
+      "What do you do if you've lost your BER cert or never received one in the first place? Don't worry, you're not alone. In this article, we'll cover everything you need to know about how to get a copy of your BER cert.",
+    keywords: [
+      "BER certificate",
+      "BER copy",
+      "BER lost",
+      "new ber cert",
+      "cant find",
+    ],
+    metaDescription:
+      "What do you do if you've lost your BER cert or never received one in the first place? Don't worry, you're not alone. In this article, we'll cover everything you need to know about how to get a copy of your BER cert.",
   },
 ];
 
