@@ -9,7 +9,7 @@ export default function Sidebar({ params }) {
   const dataMinusCurrent = data.filter((x) => x.slug !== params.slug);
 
   return (
-    <div className='block px-5 md:px-0 md:w-1/4 md:py-24 bg-[var(--text-color)] text-[var(--body-color)]'>
+    <div className='block px-5 pb-10 md:px-0 md:w-1/4 md:py-24 bg-[var(--text-color)] text-[var(--body-color)]'>
       <div className='grid grid-cols-1 gap-5'>
         <h2 className='h4'>Read more:</h2>
         {dataMinusCurrent.map((post) => {
