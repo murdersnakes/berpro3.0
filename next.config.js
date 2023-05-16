@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   experimental: {
-    appDir: true,
+    mdxRs: true,
   },
+  publicRuntimeConfig: {
+    basePath: process.env.BASE_PATH || '',
+  }
 };
-
-module.exports = nextConfig;
+ 
+const withMDX = require('@next/mdx')();
+module.exports = withMDX(nextConfig);

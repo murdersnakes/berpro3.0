@@ -8,7 +8,8 @@ import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import WhatIsBer from "./components/WhatIsBer";
 
-export default function page() {
+
+export default function page():JSX.Element {
   return (
     <div>
       <Hero />
@@ -18,6 +19,7 @@ export default function page() {
       <Benefits />
       <Testimonials />
       <Blog />
+  
     </div>
   );
 }
